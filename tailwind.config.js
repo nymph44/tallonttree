@@ -13,6 +13,10 @@ module.exports = {
           "base-200": "#EAEAEA",
           "base-300": "#CFD6CF",
           "base-content": "#000000",
+
+        },
+        fontFamily:{
+          'Raleway': ['raleway', 'sans-serif']
         },
       },
     ],

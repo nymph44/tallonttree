@@ -5,11 +5,11 @@ function App({ Component, pageProps }) {
   return(
   <>
   <div className="flex">
-
     <Sidebar />
-    <div className="p-4 w-full">
+    <div className="p-4 w-4/5 bg-base-100 ">
       <Topbar />
-    <Component {...pageProps} />
+
+      <Component {...pageProps} />
     </div>
   </div>
   </>

@@ -8,6 +8,10 @@ export const meta = {
     title: 'Alexander Janssen - Web Developer and UI/UX Designer',
 };
 
+export const user = {
+    name: "Alexander Janssen",
+};
+
 export const sidebar = {
     logo: "logo/android-chrome-192x192.png",
     title: "Talent Tree",
@@ -15,3 +19,14 @@ export const sidebar = {
     settings: "Settings",
     signout: "Sign Out",
 };
+
+export const skills = {
+    title: ["PHP", "Advanced Mathematics", "German"],
+    percentage: ["w-1/3", "w-1/2", 'w-40']
+}
+
+export const skillsAll = {
+    title: ["PHP", "Advanced Mathematics", "German","Dutch", "Surfing", "UX design","Writing", "Drawing", "Engine building"],
+    percentage: ["w-1/3", "w-1/2", 'w-40',"w-40", "w-12", 'w-20',"w-60", "w-full", 'w-full']
+}
+

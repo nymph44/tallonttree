@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    font-family: 'Raleway', sans-serif;
+  }
+}
 .sidebar-item-a{
-  @apply block px-4 py-2 font-normal text-base-content hover:bg-base-300 hover:text-secondary;
+  @apply block px-4 py-2 font-normal text-base-content  hover:bg-base-100 transition duration-200 hover:text-secondary;
 }
 
 .content{

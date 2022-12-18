@@ -1,10 +1,14 @@
 import React from 'react'
+import Header from '../../components/ui/Header'
 
+import { user } from '../../data/config'
+import RowSkillCards from '../../components/ui/cards/skills/RowSkillCards'
 function Dashboard() {
   return (
     <div>
-      <h1>Dashboard</h1>
-      <p>Welcome back User!</p>
+      <Header title="Dashboard" user={user.name}/>
+      <RowSkillCards />
+
     </div>
   )
 }
