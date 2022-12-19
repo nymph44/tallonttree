@@ -3,6 +3,7 @@ module.exports = {
   daisyui:{
     themes: [
       {
+
         mytheme: {
 
           primary: "#76B852",
@@ -15,11 +16,13 @@ module.exports = {
           "base-content": "#000000",
 
         },
-        fontFamily:{
-          'Raleway': ['raleway', 'sans-serif']
-        },
+
+
       },
     ],
+    fontFamily:{
+      'Raleway': ['raleway', 'sans-serif']
+    },
   },
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",

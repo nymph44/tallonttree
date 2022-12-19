@@ -4,7 +4,7 @@ import { sidebar } from '../../data/config';
 
 const Sidebar = () => {
   return (
-    <aside className="relative w-1/5 h-screen max-h-screen  bg-base-300">
+    <aside className="relative w-60 h-screen max-h-screen  bg-base-300">
       <div className="py-4 px-6 flex items-center space-x-4">
         <img src={sidebar.logo} alt="Logo" className="w-8" />
         <h1 className="font-bold text-primary">{sidebar.title}</h1>
