@@ -139,3 +139,54 @@ export const discussions = [
     ],
   },
 ]
+
+export const leaderboard = [
+  {
+    id: 1,
+    name: 'Alexander Janssen',
+    photoUrl: 'https://picsum.photos/200/300',
+    contributions: 1386,
+  },
+  {
+    id: 1,
+    name: 'Luc Nijboer',
+    photoUrl: 'https://picsum.photos/200/300',
+    contributions: 1286,
+  },
+  {
+    id: 1,
+    name: 'MKBHD',
+    photoUrl: 'https://picsum.photos/200/300',
+    contributions: 1199,
+  },
+  {
+    id: 1,
+    name: 'Jeff Bezos',
+    photoUrl: 'https://picsum.photos/200/300',
+    contributions: 1086,
+  },
+  {
+    id: 1,
+    name: 'Hans Janss',
+    photoUrl: 'https://picsum.photos/200/300',
+    contributions: 978,
+  },
+  {
+    id: 1,
+    name: 'Johan Janss',
+    photoUrl: 'https://picsum.photos/200/300',
+    contributions: 960,
+  },
+  {
+    id: 1,
+    name: 'Vera Klaassen',
+    photoUrl: 'https://picsum.photos/200/300',
+    contributions: 850,
+  },
+  {
+    id: 1,
+    name: 'Vera Klaassen',
+    photoUrl: 'https://picsum.photos/200/300',
+    contributions: 849,
+  },
+]
