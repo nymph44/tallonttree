@@ -1,7 +1,5 @@
 import React from 'react'
 
 export default function index() {
-  return (
-    <div>Agenda</div>
-  )
+  return <div>Agenda</div>
 }

@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import React from 'react';
-import { sidebar } from '../../data/config';
+import Link from 'next/link'
+import React from 'react'
+import { sidebar } from '../../data/config'
 
 const Sidebar = () => {
   return (
@@ -11,27 +11,30 @@ const Sidebar = () => {
       </div>
       <nav className="py-4">
         <ul className="font-medium text-white">
-            {sidebar.links.map((link) => (
-                <li className="py-2 ">
-                    <Link href={`${link}`} key={link} className="sidebar-item-a">{link}</Link>
-                </li>
-            ))}
+          {sidebar.links.map((link) => (
+            <li className="py-2 ">
+              <Link href={`${link}`} key={link} className="sidebar-item-a">
+                {link}
+              </Link>
+            </li>
+          ))}
+
+          <div className="inline-block bottom-0 w-full">
+            <li className="py-2">
+              <a href="/Settings" className="sidebar-item-a">
+                {sidebar.settings}
+              </a>
+            </li>
+            <li className="py-2">
+              <a href="/Login" className="sidebar-item-a">
+                {sidebar.signout}
+              </a>
+            </li>
+          </div>
         </ul>
       </nav>
-      <div className="inline-block align-bottom w-full">
-        <ul className="font-medium text-white">
-          <li className="py-2">
-
-            <a href="/Settings" className="sidebar-item-a">{sidebar.settings}</a>
-          </li>
-          <li className="py-2">
-
-            <a href="/Login" className="sidebar-item-a">{sidebar.signout}</a>
-          </li>
-        </ul>
-      </div>
     </aside>
-  );
-};
+  )
+}
 
-export default Sidebar;
+export default Sidebar
