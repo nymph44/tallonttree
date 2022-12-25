@@ -14,7 +14,7 @@ function Leaderboard() {
         <div className="flex">
           <div className="flex flex-col w-full">
             {leaderboard.map((item, index) => (
-              <div className="flex space-x-4 my-2 group">
+              <div className="flex space-x-4 my-2 group cursor-pointer">
                 <div className="flex space-x-2">
                   <img
                     src={item.photoUrl}
@@ -22,7 +22,7 @@ function Leaderboard() {
                     className="rounded-full w-6 h-6"
                   />
                 </div>
-                <h1 className="text-md font-bold group-hover:text-primary cursor-pointer">
+                <h1 className="text-md font-bold group-hover:text-primary">
                   {item.name}
                 </h1>
 

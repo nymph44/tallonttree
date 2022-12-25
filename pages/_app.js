@@ -5,7 +5,7 @@ import '../styles/globals.css'
 function App({ Component, pageProps }) {
   return (
     <>
-      <div className="flex" data-theme="halloween">
+      <div className="flex" data-theme="dracula">
         <Sidebar />
         <div className="p-4 ml-8 w-4/5 bg-base-100 ">
           <Topbar />

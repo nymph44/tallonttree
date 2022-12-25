@@ -8,7 +8,18 @@
   }
 }
 .sidebar-item-a {
-  @apply block px-4 py-2 font-normal text-base-content  hover:bg-base-100 transition duration-200 hover:text-secondary;
+  @apply block
+  px-4
+  my-1
+  mx-2
+  py-2
+  rounded-full
+  text-base-content
+  hover:text-primary
+  hover:bg-base-100
+  transition
+  font-medium
+  duration-200;
 }
 
 .content {
