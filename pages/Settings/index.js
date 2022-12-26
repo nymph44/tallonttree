@@ -73,7 +73,7 @@ function index() {
                 src="https://picsum.photos/200/300"
                 alt="photo"
               />
-              <div class="  btn btn-sm btn-outline  mt-5 ml-3 font-bold px-4 py-2 rounded-lg float-left hover:bg-gray-300 hover:text-gray-600 relative overflow-hidden cursor-pointer">
+              <div class="  btn btn-primary btn-sm btn-outline  mt-5 ml-3 font-bold px-4 py-2 rounded-lg float-left hover:bg-gray-300 hover:text-gray-600 relative overflow-hidden cursor-pointer">
                 <input
                   type="file"
                   name="photo"

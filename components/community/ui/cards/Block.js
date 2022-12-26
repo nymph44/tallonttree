@@ -2,7 +2,7 @@ import React from 'react'
 
 function Block() {
   return (
-    <div className="cursor-pointer group card w-48 h-60 bg-base-100 shadow-xl image-full">
+    <div className="cursor-pointer group card w-48 h-48 bg-base-100 shadow-xl image-full">
       <figure>
         <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
       </figure>

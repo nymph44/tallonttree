@@ -13,7 +13,7 @@ function Dashboard() {
       <div className="w-full">
         <h1 className="font-bold mb-8">Your activity</h1>
         <div className="flex">
-          <div className="w-1/2 border border-base-300 bg-base-200 rounded-xl pr-2 flex space-x-4">
+          <div className="w-1/2 border border-base-300 bg-base-100 rounded-xl pr-2 flex space-x-4">
             <div className="flex-col flex">
               <div className="border border-base-200 bg-base-300 rounded-xl  w-60 p-4 m-4 ">
                 <h1 className="font-bold text-md">Upcoming deadlines</h1>

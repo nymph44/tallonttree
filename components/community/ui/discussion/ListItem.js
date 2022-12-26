@@ -10,24 +10,24 @@ function ListItem() {
         return (
           <>
             <div className=" my-2 flex justify-between w-full">
-              <div className="flex w-full">
-                <a href="/Post" className="text-accent w-full">
-                  <div className="flex w-full">
+              <div className="flex w-full ">
+                <a href="/Post" className="text-accent w-full ">
+                  <div className="flex w-full ">
                     <div>
                       <img
-                        className="w-12 h-12  object-cover rounded-full mr-4"
+                        className="w-12 h-12 object-cover rounded-full mr-6"
                         src={discussion.photoUrl}
                         alt={discussion.author}
                       />
                     </div>
-                    <div className="flex space-x-2 ">
-                      <div className="w-2 h-2 bg-accent rounded-full mt-2"></div>
+                    <div className="flex groupspace-x-2 ">
+                      <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-2"></div>
 
                       <div className="group cursor-pointer">
-                        <h1 className="text-xl font-bold group-hover:text-primary ">
+                        <h1 className="text-lg text-primary group-hover:text-primary-focus ">
                           {discussion.title}
                         </h1>
-                        <div className="flex space-x-1 text-base-content">
+                        <div className="flex space-x-1 text-base-content text-sm">
                           <p>{discussion.author}</p>
                           <p> • </p>
                           <p>{discussion.date}</p>

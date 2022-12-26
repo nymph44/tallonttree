@@ -152,7 +152,8 @@ export const leaderboard = [
   {
     id: 1,
     name: 'Luc Nijboer',
-    photoUrl: 'https://picsum.photos/200/300',
+    photoUrl:
+      'https://media.licdn.com/dms/image/C4D03AQEEJU2F6lOOxA/profile-displayphoto-shrink_800_800/0/1650485142228?e=1677715200&v=beta&t=Y5lG5Mn345u3E8c8UGVbmtNeXpeUz0nM5lw-iVgeQQY',
     contributions: 1286,
   },
   {

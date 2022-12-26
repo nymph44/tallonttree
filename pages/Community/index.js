@@ -7,7 +7,9 @@ import { user } from '../../data/config'
 function index() {
   return (
     <div>
-      <Header title="Community" user={user.name} />
+      <div className="pt-4">
+        <h1 className="font-bold text-4xl mb-4">Community</h1>
+      </div>
       <div>
         <div className="flex space-x-4 overflow-auto overflow-invisble no-scrollbar">
           <Block />
@@ -27,11 +29,11 @@ function index() {
         <div className="w-full">
           <div className="my-8">
             <h1 className="text-2xl font-bold">Discussions & Articles</h1>
-            <button className="mt-2 btn btn-secondary btn-sm">
+            <button className="mt-4 btn btn-primary btn-outline btn-xs font-normal">
               View all 556 discussions
             </button>
           </div>
-          <div className="bg-base-200 p-4 -mt-2 rounded-lg">
+          <div className=" -mt-2 p-4 rounded-xl bg-base-100 border border-base-300">
             <div className="flex">
               <div className="flex flex-col w-full">
                 <ListItem />

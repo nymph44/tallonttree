@@ -10,7 +10,7 @@ function Leaderboard() {
           community!
         </p>
       </div>
-      <div className="bg-base-200 p-4 rounded-lg w-full">
+      <div className="bg-base-100 border  border-base-300 p-4 rounded-lg w-full">
         <div className="flex">
           <div className="flex flex-col w-full">
             {leaderboard.map((item, index) => (
