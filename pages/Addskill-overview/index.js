@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function index() {
@@ -94,9 +95,9 @@ function index() {
           <p className="text-xl">Generated roadmap for your skill</p>
         </div>
         <div className=" flex justify-end">
-          <a href="/Dashboard">
+          <Link href="/Dashboard">
             <button className="btn btn-primary">Accept and save</button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

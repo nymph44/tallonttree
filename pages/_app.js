@@ -6,12 +6,13 @@ function App({ Component, pageProps }) {
   const backgroundStyle = {
     backgroundImage: 'url(/assets/img/vector/VectorMask.png',
   }
+
   return (
     <>
       <div
         className="flex bg-base-200 bg-fixed bg-no-repeat	bg-origin-border bg-cover bg-center  "
         style={backgroundStyle}
-        data-theme="dracula"
+        // data-theme="tallenttree"
       >
         <div class="h-screen sticky top-0">
           <Sidebar />

@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 function index() {
   return (
     <div className="flex flex-col items-center h-full -mt-10">
@@ -17,9 +18,9 @@ function index() {
       </div>
       <div className="bottom-0 mb-10 w-full flex justify-between ">
         <div className="">{/* <button className="btn">Back</button> */}</div>
-        <a href="/Addskill-2">
+        <Link href="/Addskill-2">
           <button className="btn btn-primary">Next</button>
-        </a>
+        </Link>
       </div>
     </div>
   )
