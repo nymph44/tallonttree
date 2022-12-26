@@ -12,9 +12,11 @@ function WrapSkillCards() {
             ></div>
           </div>
           <div className="w-full flex justify-end">
-            <button className="btn btn-sm btn-outline btn-primary">
-              GO TO SKILL
-            </button>
+            <a href="/Skill">
+              <button className="btn btn-sm btn-outline btn-primary">
+                GO TO SKILL
+              </button>
+            </a>
           </div>
         </div>
       ))}

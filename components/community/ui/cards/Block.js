@@ -4,7 +4,7 @@ function Block() {
   return (
     <div className="cursor-pointer group card w-48 h-48 bg-base-100 shadow-xl image-full">
       <figure>
-        <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
+        <img src="https://picsum.photos/300/300" alt="Shoes" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">Shoes!</h2>

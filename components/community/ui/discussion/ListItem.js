@@ -51,7 +51,6 @@ function ListItem() {
                 </div>
               </div>
             </div>
-
             {index + 1 < discussions.length ? <Divider /> : <LoadMoreDivider />}
           </>
         )
