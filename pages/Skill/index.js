@@ -37,9 +37,11 @@ function index() {
             <div className="bg-base-100 rounded-xl p-4 flex space-y-4 flex-col">
               <h2>Reflect</h2>
               <div className="bg-primary h-2.5 rounded-full"></div>
-              <button className="btn btn-primary">
-                Continue reflect on subgoal
-              </button>
+              <a href="/kdarate">
+                <button className="btn btn-primary">
+                  Continue reflect on subgoal
+                </button>
+              </a>
             </div>
           </div>
           <div className="w-5/6 flex">

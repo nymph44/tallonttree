@@ -2,12 +2,16 @@ import React from 'react'
 
 function Block() {
   return (
-    <div className="cursor-pointer group card w-48 h-48 bg-base-100 shadow-xl image-full">
+    <div className="cursor-pointer group card  w-1/6 h-60 shadow-lg image-full">
       <figure>
-        <img src="https://picsum.photos/300/300" alt="Shoes" />
+        <img
+          className="rounded-xl"
+          src="https://picsum.photos/300/300"
+          alt="Shoes"
+        />
       </figure>
-      <div className="card-body">
-        <h2 className="card-title">Shoes!</h2>
+      <div className="card-body bottom-0">
+        <h2 className="card-title">Skill</h2>
         <p className="text-white text-sm">Sketching • Art</p>
       </div>
     </div>

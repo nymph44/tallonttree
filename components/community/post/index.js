@@ -86,9 +86,9 @@ function Slug({
                   <div className="bg-base-200 p-4 rounded-lg my-4">
                     <p>
                       {'<'}
-                      <span className="text-accent">ui</span>:
-                      <span className="text-accent">include</span>{' '}
-                      <span className="text-accent">src</span>=
+                      <span className="text-primary">ui</span>:
+                      <span className="text-primary">include</span>{' '}
+                      <span className="text-primary">src</span>=
                       <span className="text-primary">"b.xhtml"</span>
                       {'/>'}
                     </p>

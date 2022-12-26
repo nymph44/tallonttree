@@ -6,13 +6,12 @@ import Header from '../../components/ui/Header'
 import { user } from '../../data/config'
 function index() {
   return (
-    <div>
+    <div class="w-full">
       <div className="pt-4">
         <h1 className="font-bold text-4xl mb-4">Community</h1>
       </div>
-      <div>
-        <div className="flex space-x-4 overflow-auto overflow-invisble no-scrollbar">
-          <Block />
+      <div class="max-w-8xl">
+        <div className="flex space-x-5 overflow-auto overflow-invisble no-scrollbar">
           <Block />
           <Block />
           <Block />
@@ -21,9 +20,9 @@ function index() {
           <Block />
           <Block />
         </div>
-        <div className="w-full flex justify-end pt-4">
-          <button className="btn btn-sm ">See more skills</button>
-        </div>
+      </div>
+      <div className="w-full flex justify-end pt-4 ">
+        <button className="btn btn-sm ">See more skills</button>
       </div>
       <div className="flex space-x-8 w-full">
         <div className="w-full">

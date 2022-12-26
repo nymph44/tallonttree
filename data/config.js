@@ -17,7 +17,8 @@ export const user = {
 export const sidebar = {
   logo: 'logo/android-chrome-192x192.png',
   title: 'Talent Tree',
-  links: ['Dashboard', 'Skills', 'Agenda', 'Community'],
+  links: [`Dashboard`, 'Skills', 'Agenda', 'Community'],
+
   settings: 'Settings',
   signout: 'Sign Out',
 }
@@ -95,27 +96,6 @@ export const discussions = [
         author: 'Brad Pitt',
         photoUrl:
           'https://previews.123rf.com/images/subbotina/subbotina1510/subbotina151000118/46445929-schoonheid-jonge-vrouw-portret-ge%C3%AFsoleerd-op-wit.jpg',
-      },
-    ],
-  },
-  {
-    id: 1,
-    title: 'How to learn PHP',
-    author: 'Alexander Janssen',
-    date: '12-12-2020',
-    photoUrl: 'https://picsum.photos/200/300',
-    content:
-      'I am trying to learn PHP but I am having a hard time. Can anyone help me?',
-    comments: [
-      {
-        id: 1,
-        author: 'Brad Pitt',
-        photoUrl: 'https://picsum.photos/200/300',
-      },
-      {
-        id: 2,
-        author: 'Brad Pitt',
-        photoUrl: 'https://picsum.photos/200/300',
       },
     ],
   },

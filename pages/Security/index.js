@@ -39,7 +39,7 @@ function index() {
                 New Password
               </label>
               <input
-                class="mt-2 border-2 border-base-200 px-3 py-2 block w-full rounded-lg text-base text-base-content focus:outline-none focus:border-primary-focus"
+                class="mt-2 border-2 border-base-200 px-3 py-2 bg-base-200 block w-full rounded-lg text-base text-base-content focus:outline-none focus:border-primary-focus"
                 type="text"
                 name="name"
               />
@@ -50,14 +50,14 @@ function index() {
                 Confirm Password
               </label>
               <input
-                class="mt-2 border-2 border-base-200 px-3 py-2 block w-full rounded-lg text-base text-base-content focus:outline-none focus:border-primary-focus"
+                class="mt-2 border-2 border-base-200 px-3 py-2 block w-full bg-base-200 rounded-lg text-base text-base-content focus:outline-none focus:border-primary-focus"
                 type="text"
                 name="name"
               />
             </div>
           </div>
         </div>
-        <div class="p-8 pb-16 bg-base-200 clearfix rounded-b-lg border-t border-base-200">
+        <div class="p-8 pb-16 bg-base-100 clearfix rounded-b-lg border-t border-base-200">
           <p class="float-left text-xs text-base-content tracking-tight mt-2">
             Click on Save to update your Security Info
           </p>
