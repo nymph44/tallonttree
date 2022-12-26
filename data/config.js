@@ -140,6 +140,27 @@ export const discussions = [
       },
     ],
   },
+  {
+    id: 1,
+    title: 'How to learn PHP',
+    author: 'Alexander Janssen',
+    date: '12-12-2020',
+    photoUrl: 'https://picsum.photos/200/300',
+    content:
+      'I am trying to learn PHP but I am having a hard time. Can anyone help me?',
+    comments: [
+      {
+        id: 1,
+        author: 'Brad Pitt',
+        photoUrl: 'https://picsum.photos/200/300',
+      },
+      {
+        id: 2,
+        author: 'Brad Pitt',
+        photoUrl: 'https://picsum.photos/200/300',
+      },
+    ],
+  },
 ]
 
 export const leaderboard = [
