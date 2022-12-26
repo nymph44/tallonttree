@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function Argument() {
@@ -40,12 +41,12 @@ function Argument() {
         </div>
       </div>
       <div className="bottom-0 mb-10 w-full flex justify-between ">
-        <a href="/Addskill-3">
+        <Link href="/Addskill-3">
           <button className="btn btn-primary">Back</button>
-        </a>
-        <a href="/Addskill-overview">
+        </Link>
+        <Link href="/Addskill-overview">
           <button className="btn btn-primary">Next</button>
-        </a>
+        </Link>
       </div>
     </div>
   )

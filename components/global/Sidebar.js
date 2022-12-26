@@ -130,9 +130,9 @@ const Sidebar = () => {
               />
             </svg>
 
-            <a className="text-sm items-center flex" href="/Settings">
+            <Link className="text-sm items-center flex" href="/Settings">
               {sidebar.settings}
-            </a>
+            </Link>
           </li>
           <li className="py-2 min-w-full  mx-2 flex px-4 space-x-2 rounded-full text-base-content hover:text-primary hover:bg-base-100 transition font-medium duration-200">
             <svg
@@ -150,9 +150,9 @@ const Sidebar = () => {
               />
             </svg>
 
-            <a className="text-sm items-center flex" href="/Login">
+            <Link className="text-sm items-center flex" href="/Login">
               {sidebar.signout}
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
