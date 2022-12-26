@@ -8,7 +8,7 @@ function index() {
         <p className="text-4xl">&nbsp;/&nbsp;</p>
         <h1 className=" text-2xl">Dutch</h1>
       </div>
-      <div className="border border-base-300 flex flex-col items-center rounded-xl p-4 my-4 w-1/6">
+      <div className="bg-base-100 flex flex-col items-center rounded-xl p-4 my-4 w-1/6">
         <div>
           <p>Due date</p>
         </div>
@@ -164,7 +164,7 @@ function index() {
               />
             </svg>
             <span class="font-medium text-gray-600">
-              Drop files to Attach, or
+              Drop files to Attach, or&nbsp;
               <span class="text-blue-600 underline">browse</span>
             </span>
           </span>
