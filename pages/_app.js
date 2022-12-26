@@ -5,9 +5,11 @@ import '../styles/globals.css'
 function App({ Component, pageProps }) {
   return (
     <>
-      <div className="flex" data-theme="dracula">
-        <Sidebar />
-        <div className="p-4 ml-8 w-4/5 bg-base-100 ">
+      <div className="flex bg-base-200" data-theme="dracula">
+        <div class="h-screen sticky top-0">
+          <Sidebar />
+        </div>
+        <div className="p-4 ml-8 w-4/5 ">
           <Topbar />
 
           <Component {...pageProps} />

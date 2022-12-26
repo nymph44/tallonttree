@@ -1,41 +1,10 @@
 import React from 'react'
-import Header from '../../ui/Header'
 
-function Slug({
-  title,
-  date,
-  modified,
-  views,
-  votes,
-  answers,
-  tags,
-  question,
-  dump,
-}) {
+function index({ awnser, dump, votes }) {
   return (
     <div>
-      {/* <h1 className="text-2xl">{title}</h1> */}
-      <div className="pt-4">
-        <h1 className="font-bold text-4xl mb-4">{title}</h1>
-      </div>
-      <div className="my-4 flex space-x-4">
-        <p className="text-base-content text-xs">
-          <span className="text-base-content opacity-75">Asked:&nbsp;</span>
-          {date}
-        </p>
-
-        <p className="text-base-content text-xs">
-          <span className="text-base-content opacity-75">Modified:&nbsp;</span>
-          {modified} ago
-        </p>
-        <p className="text-base-content text-xs">
-          <span className="text-base-content opacity-75">Viewed:&nbsp;</span>
-          {views} k
-        </p>
-      </div>
-
-      <div>
-        <div className=" ">
+      <div className="bg-base-300 rounded-xl">
+        <div>
           <div className="flex space-x-4">
             {/* Votes */}
             <div className="flex bg-base-300 rounded-xl py-4 ">
@@ -80,27 +49,11 @@ function Slug({
                   </button>
                 </div>
               </div>
-              <div className="w-full rounded-xl">
+              <div className="w-11/12 rounded-xl">
                 <div className="mx-2 pr-4">
-                  <p>{question}</p>
+                  <p>{awnser}</p>
                   <div className="bg-base-200 p-4 rounded-lg my-4">
-                    <p>
-                      {'<'}
-                      <span className="text-accent">ui</span>:
-                      <span className="text-accent">include</span>{' '}
-                      <span className="text-accent">src</span>=
-                      <span className="text-primary">"b.xhtml"</span>
-                      {'/>'}
-                    </p>
-                  </div>
-                  <div>
                     <p>{dump}</p>
-                  </div>
-                  {/* Badges */}
-                  <div className=" flex space-x-4 my-4 ">
-                    {tags.map((tag) => (
-                      <div className="badge badge-accent">{tag}</div>
-                    ))}
                   </div>
                 </div>
               </div>
@@ -112,4 +65,4 @@ function Slug({
   )
 }
 
-export default Slug
+export default index

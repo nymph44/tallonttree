@@ -8,15 +8,20 @@ function index() {
   return (
     <div>
       <Header title="Community" user={user.name} />
-      <div className="flex space-x-4 overflow-auto overflow-invisble no-scrollbar">
-        <Block />
-        <Block />
-        <Block />
-        <Block />
-        <Block />
-        <Block />
-        <Block />
-        <Block />
+      <div>
+        <div className="flex space-x-4 overflow-auto overflow-invisble no-scrollbar">
+          <Block />
+          <Block />
+          <Block />
+          <Block />
+          <Block />
+          <Block />
+          <Block />
+          <Block />
+        </div>
+        <div className="w-full flex justify-end pt-4">
+          <button className="btn btn-sm ">See more skills</button>
+        </div>
       </div>
       <div className="flex space-x-8 w-full">
         <div className="w-full">

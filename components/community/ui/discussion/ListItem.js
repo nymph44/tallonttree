@@ -10,9 +10,9 @@ function ListItem() {
         return (
           <>
             <div className=" my-2 flex justify-between w-full">
-              <div className="flex">
-                <a href="/Post" className="text-accent">
-                  <div className="flex ">
+              <div className="flex w-full">
+                <a href="/Post" className="text-accent w-full">
+                  <div className="flex w-full">
                     <div>
                       <img
                         className="w-12 h-12  object-cover rounded-full mr-4"
@@ -38,7 +38,7 @@ function ListItem() {
                     </div>
                   </div>
                 </a>
-                <div className="flex justify-end items-center mr-auto -space-x-8 ml-8">
+                <div className="flex w-full justify-end items-center mr-auto -space-x-8 ml-8">
                   {discussion.comments.map((comment) => {
                     return (
                       <img
