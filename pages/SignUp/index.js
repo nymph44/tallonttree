@@ -1,14 +1,15 @@
+import Link from 'next/link'
 import React, { useState } from 'react'
 
 function index() {
   return (
-    <section className="h-full gradient-form md:h-screen">
-      <div className="container py-12 px-6 h-full">
-        <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
+    <section className=" gradient-form md:h-screen">
+      <div className="container px-6 ">
+        <div className="flex w-1/2 mx-auto justify-center items-center flex-wrap g-6 text-gray-800">
           <div className="xl:w-10/12">
             <div className="block bg-base-300 shadow-lg rounded-lg">
               <div className="lg:flex lg:flex-wrap g-0">
-                <div className="lg:w-6/12 px-4 md:px-0">
+                <div className="w-full px-4 md:px-0">
                   <div className="md:p-12 md:mx-6">
                     <div className=" mb-16 flex items-center justify-center space-x-4">
                       <img
@@ -110,22 +111,28 @@ function index() {
                           Create account
                         </button>
                         <div className="my-4">
-                          <a className="text-base-content py-4" href="#!">
+                          <Link
+                            href={{ pathname: '/Forgotpassword' }}
+                            className="text-base-content py-4"
+                          >
                             Forgot password?
-                          </a>
+                          </Link>
                         </div>
-                      </div>
-                      <div className="flex items-center justify-between pb-6">
-                        <a href="/SignUp" className="text-base-content">
-                          <p className="mb-0 mr-2 text-base-content">
-                            Don't have an account?
-                          </p>
-                        </a>
+                        {/* <div className="my-4">
+                          <Link
+                            href={{ pathname: '/SignUp' }}
+                            className="text-base-content"
+                          >
+                            <p className="mb-0 mr-2 text-base-content">
+                              Don't have an account?
+                            </p>
+                          </Link>
+                        </div> */}
                       </div>
                     </form>
                   </div>
                 </div>
-                <div className="bg-hero-pattern lg:w-6/12 flex items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none"></div>
+                {/* <div className="bg-hero-pattern lg:w-6/12 flex items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none"></div> */}
               </div>
             </div>
           </div>

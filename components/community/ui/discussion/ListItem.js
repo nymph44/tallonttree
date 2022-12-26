@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 import { discussions, comments } from '../../../../data/config'
@@ -11,7 +12,10 @@ function ListItem() {
           <>
             <div className=" my-2 flex justify-between w-full">
               <div className="flex w-full ">
-                <a href="/Post" className="text-accent w-full ">
+                <Link
+                  href={{ pathname: '/Post', query: { id: index } }}
+                  className="text-accent w-full "
+                >
                   <div className="flex w-full ">
                     <div>
                       <img
@@ -37,7 +41,7 @@ function ListItem() {
                       </div>
                     </div>
                   </div>
-                </a>
+                </Link>
                 <div className="flex w-full justify-end items-center mr-auto -space-x-8 ml-8">
                   {discussion.comments.map((comment) => {
                     return (

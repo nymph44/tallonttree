@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function index() {
@@ -24,9 +25,9 @@ function index() {
               <button type="submit" class="btn btn-primary ">
                 Login
               </button>
-              <a href="#" class="text-sm hover:underline">
+              <Link href="#" class="text-sm hover:underline">
                 Forgot password?
-              </a>
+              </Link>
             </div>
           </div>
         </div>

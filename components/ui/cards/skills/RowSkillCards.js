@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import { skills } from '../../../../data/config'
 function RowSkillCards() {
@@ -14,9 +15,16 @@ function RowSkillCards() {
               ></div>
             </div>
             <div className=" w-full flex justify-end">
-              <button className="btn btn-sm btn-outline btn-primary">
-                GO TO SKILL
-              </button>
+              <Link
+                href={{
+                  pathname: '/Skill',
+                  query: { id: index },
+                }}
+              >
+                <button className="btn btn-sm btn-outline btn-primary">
+                  GO TO SKILL
+                </button>
+              </Link>
             </div>
           </div>
         ))}
@@ -39,13 +47,17 @@ function RowSkillCards() {
             </svg>
           </div>
 
-          <a href="/Addskill">
+          <Link
+            href={{
+              pathname: '/Addskill',
+            }}
+          >
             <div className="w-full flex justify-center">
               <button className="btn btn-sm btn-outline btn-primary">
                 Add skill
               </button>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
