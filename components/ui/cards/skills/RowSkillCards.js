@@ -39,11 +39,13 @@ function RowSkillCards() {
             </svg>
           </div>
 
-          <div className="w-full flex justify-center">
-            <button className="btn btn-sm btn-outline btn-primary">
-              Add skill
-            </button>
-          </div>
+          <a href="/Addskill">
+            <div className="w-full flex justify-center">
+              <button className="btn btn-sm btn-outline btn-primary">
+                Add skill
+              </button>
+            </div>
+          </a>
         </div>
       </div>
     </div>

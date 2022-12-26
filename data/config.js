@@ -18,7 +18,6 @@ export const sidebar = {
   logo: 'logo/android-chrome-192x192.png',
   title: 'Talent Tree',
   links: [`Dashboard`, 'Skills', 'Agenda', 'Community'],
-
   settings: 'Settings',
   signout: 'Sign Out',
 }
