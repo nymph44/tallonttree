@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function index() {
@@ -7,16 +8,26 @@ function index() {
         Account Settings
       </h1>
       <ul class="flex border-b border-primary text-sm font-medium text-base-content mt-3 px-6 md:px-0">
-        <li class="mr-8 hover:text-primary">
-          <a href="/Settings" class="py-4 inline-block">
+        <li class="mr-8 text-base-content  ">
+          <Link
+            class="py-4 inline-block"
+            href={{
+              pathname: '/Settings',
+            }}
+          >
             Profile Info
-          </a>
+          </Link>
         </li>
 
-        <li class="mr-8 text-base-content border-b-2 border-primary">
-          <a href="/Security" class="py-4 inline-block">
+        <li class="mr-8 hover:text-primary border-b-2 border-primary">
+          <Link
+            class="py-4 inline-block"
+            href={{
+              pathname: '/Security',
+            }}
+          >
             Security
-          </a>
+          </Link>
         </li>
       </ul>
       <form

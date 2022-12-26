@@ -3,6 +3,10 @@ import React from 'react'
 import { sidebar } from '../../data/config'
 
 const Sidebar = () => {
+  const current = new Date()
+  const date = `${current.getDate()}/${
+    current.getMonth() + 1
+  }/${current.getFullYear()}`
   return (
     <aside className="relative  w-60 h-screen max-h-screen bg-base-300">
       <div className="py-4 px-6 flex items-center space-x-4">
@@ -19,8 +23,10 @@ const Sidebar = () => {
             </Link>
           ))} */}
           <Link
-            href="/Dashboard"
             className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-base-content hover:text-primary hover:bg-base-100 transition font-medium duration-200 items-center"
+            href={{
+              pathname: '/Dashboard',
+            }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -40,8 +46,10 @@ const Sidebar = () => {
             <p>Dashboard</p>
           </Link>
           <Link
-            href="/Skills"
             className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-base-content hover:text-primary hover:bg-base-100 transition font-medium duration-200 items-center"
+            href={{
+              pathname: '/Skills',
+            }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -60,9 +68,12 @@ const Sidebar = () => {
 
             <p>Skills</p>
           </Link>
+
           <Link
-            href="/Agenda"
             className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-base-content hover:text-primary hover:bg-base-100 transition font-medium duration-200 items-center"
+            href={{
+              pathname: '/Agenda',
+            }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +93,7 @@ const Sidebar = () => {
             <p>Agenda</p>
           </Link>
           <Link
-            href="/Community"
+            href={{ pathname: '/Community' }}
             className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-base-content hover:text-primary hover:bg-base-100 transition font-medium duration-200 items-center"
           >
             <svg
@@ -130,7 +141,10 @@ const Sidebar = () => {
               />
             </svg>
 
-            <Link className="text-sm items-center flex" href="/Settings">
+            <Link
+              className="text-sm items-center flex"
+              href={{ pathname: '/Settings' }}
+            >
               {sidebar.settings}
             </Link>
           </li>
@@ -150,7 +164,10 @@ const Sidebar = () => {
               />
             </svg>
 
-            <Link className="text-sm items-center flex" href="/Login">
+            <Link
+              className="text-sm items-center flex"
+              href={{ pathname: '/Login', query: '' }}
+            >
               {sidebar.signout}
             </Link>
           </li>
