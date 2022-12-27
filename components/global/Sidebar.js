@@ -8,7 +8,7 @@ const Sidebar = () => {
     current.getMonth() + 1
   }/${current.getFullYear()}`
   return (
-    <aside className="relative  w-60 h-screen max-h-screen bg-base-300">
+    <aside className="relative  w-60 h-screen max-h-screen bg-neutral">
       <div className="py-4 px-6 flex items-center space-x-4">
         <img src={sidebar.logo} alt="Logo" className="w-8" />
         <h1 className="font-bold text-primary">{sidebar.title}</h1>
@@ -23,7 +23,7 @@ const Sidebar = () => {
             </Link>
           ))} */}
           <Link
-            className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-base-content hover:text-primary hover:bg-base-100 transition font-medium duration-200 items-center"
+            className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-neutral-content hover:text-primary hover:bg-neutral-focus transition font-medium duration-200 items-center"
             href={{
               pathname: '/Dashboard',
             }}
@@ -46,7 +46,7 @@ const Sidebar = () => {
             <p>Dashboard</p>
           </Link>
           <Link
-            className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-base-content hover:text-primary hover:bg-base-100 transition font-medium duration-200 items-center"
+            className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-neutral-content hover:text-primary hover:bg-neutral-focus transition font-medium duration-200 items-center"
             href={{
               pathname: '/Skills',
             }}
@@ -70,7 +70,7 @@ const Sidebar = () => {
           </Link>
 
           <Link
-            className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-base-content hover:text-primary hover:bg-base-100 transition font-medium duration-200 items-center"
+            className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-neutral-content hover:text-primary hover:bg-neutral-focus transition font-medium duration-200 items-center"
             href={{
               pathname: '/Agenda',
             }}
@@ -94,7 +94,7 @@ const Sidebar = () => {
           </Link>
           <Link
             href={{ pathname: '/Community' }}
-            className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-base-content hover:text-primary hover:bg-base-100 transition font-medium duration-200 items-center"
+            className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-neutral-content hover:text-primary hover:bg-neutral-focus transition font-medium duration-200 items-center"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +120,7 @@ const Sidebar = () => {
 
       <nav className="py-4 w-56 flex flex-col space-y-8 absolute bottom-0">
         <ul className="font-medium w-full flex flex-col space-y-4">
-          <li className="py-2 min-w-full  mx-2 flex px-4 space-x-2 rounded-full text-base-content hover:text-primary hover:bg-base-100 transition font-medium duration-200">
+          <li className="py-2 min-w-full  mx-2 flex px-4 space-x-2 rounded-full text-neutral-content hover:text-primary hover:bg-neutral-focus  transition font-medium duration-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -148,7 +148,7 @@ const Sidebar = () => {
               {sidebar.settings}
             </Link>
           </li>
-          <li className="py-2 min-w-full  mx-2 flex px-4 space-x-2 rounded-full text-base-content hover:text-primary hover:bg-base-100 transition font-medium duration-200">
+          <li className="py-2 min-w-full  mx-2 flex px-4 space-x-2 rounded-full text-neutral-content hover:text-primary hover:bg-neutral-focus transition font-medium duration-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

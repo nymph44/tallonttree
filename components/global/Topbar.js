@@ -14,7 +14,7 @@ function Topbar() {
         <input
           type="text"
           placeholder="Search"
-          className="px-4 py-2 rounded-full bg-base-300 text-base-content outline-primary focus:outline-primary-focus focus:ring-2 mr-4"
+          className="px-4 py-2 rounded-full bg-neutral focus:bg-neutral-focus text-neutral-content outline-primary focus:outline-primary-focus focus:ring-2 mr-4"
         />
       </div>
       <div className="flex flex-end items-center space-x-4">

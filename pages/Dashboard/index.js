@@ -5,6 +5,7 @@ import { user } from '../../data/config'
 import RowSkillCards from '../../components/ui/cards/skills/RowSkillCards'
 import LineChart from '../../components/ui/charts/linechart/LineChart'
 import DayView from '../../components/ui/calendar/DayView'
+import WriteToCloudFirestore from '../../components/cloudFirestore/Write'
 function Dashboard() {
   return (
     <div>
@@ -12,6 +13,7 @@ function Dashboard() {
       <RowSkillCards />
       <div className="w-full">
         <h1 className="font-bold mb-8">Your activity</h1>
+        <WriteToCloudFirestore />
         <div className="flex">
           <div className="w-1/2 border border-base-300 bg-base-100 rounded-xl pr-2 flex space-x-4">
             <div className="flex-col flex">

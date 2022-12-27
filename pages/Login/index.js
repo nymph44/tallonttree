@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import FirebaseAuth from '../../components/auth/FirebaseAuth'
 
 function index() {
   return (

@@ -12,9 +12,8 @@ function App({ Component, pageProps }) {
       <div
         className="flex bg-base-200 bg-fixed bg-no-repeat	bg-origin-border bg-cover bg-center  "
         style={backgroundStyle}
-        // data-theme="tallenttree"
       >
-        <div class="h-screen sticky top-0">
+        <div className="h-screen sticky top-0">
           <Sidebar />
         </div>
         <div className="p-4 ml-8 w-full ">
