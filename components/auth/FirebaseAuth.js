@@ -37,16 +37,15 @@ const FirebaseAuth = () => {
       setRenderAuth(true)
     }
   }, [])
-  return (
-    <div>
-      {/* {renderAuth ? (
-        <StyledFirebaseAuth
-          uiConfig={FirebaseAuthConfig}
-          firebaseAuth={firebase.auth()}
-        />
-      ) : null} */}
-    </div>
-  )
+  return alert('hello')
+  // <div>
+  //   {/* {renderAuth ? (
+  //     <StyledFirebaseAuth
+  //       uiConfig={FirebaseAuthConfig}
+  //       firebaseAuth={firebase.auth()}
+  //     />
+  //   ) : null} */}
+  // </div>
 }
 
 export default FirebaseAuth

@@ -26,6 +26,11 @@ function index() {
               <button type="submit" class="btn btn-primary ">
                 Login
               </button>
+              <Link href="/SignUp" class="text-sm hover:underline">
+                <button type="submit" class="btn btn-primary ">
+                  Sign up
+                </button>
+              </Link>
               <Link href="#" class="text-sm hover:underline">
                 Forgot password?
               </Link>

@@ -4,6 +4,10 @@ import { meta } from '../data/config'
 
 const inter = Inter({ subsets: ['latin'] })
 
+// export const getStaticProps = async () => {
+//  const res = awa
+// }
+
 export default function index() {
   return (
     <>

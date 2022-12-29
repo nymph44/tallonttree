@@ -8,12 +8,13 @@ const Sidebar = () => {
     current.getMonth() + 1
   }/${current.getFullYear()}`
   return (
-    <aside className="relative  w-60 h-screen max-h-screen bg-neutral">
-      <div className="py-4 px-6 flex items-center space-x-4">
+    <aside className="relative  w-72 h-screen  bg-neutral">
+      <div className="pt-6 px-6 flex items-center space-x-4">
         <img src={sidebar.logo} alt="Logo" className="w-8" />
         <h1 className="font-bold text-primary">{sidebar.title}</h1>
       </div>
-      <nav className="py-4 w-full">
+      <div className="divider"></div>
+      <nav className="w-full">
         <ul className="font-medium w-full flex flex-col space-y-4">
           {/* {sidebar.links.map((link) => (
             <Link href={`${link}`} key={link} className="text-sm">
@@ -115,11 +116,11 @@ const Sidebar = () => {
           </Link>
         </ul>
       </nav>
-
       {/* <div className="flex w-full space-x-4 sidebar-item-a"> */}
 
-      <nav className="py-4 w-56 flex flex-col space-y-8 absolute bottom-0">
-        <ul className="font-medium w-full flex flex-col space-y-4">
+      <div className="py-4 w-full flex flex-col  absolute bottom-0">
+        <div className="divider bottom-auto"></div>
+        <ul className="font-medium w-64 flex flex-col space-y-4">
           <li className="py-2 min-w-full  mx-2 flex px-4 space-x-2 rounded-full text-neutral-content hover:text-primary hover:bg-neutral-focus  transition font-medium duration-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +173,24 @@ const Sidebar = () => {
             </Link>
           </li>
         </ul>
-      </nav>
+        <div className="divider bottom-auto"></div>
+        <div className="px-6 flex space-x-4">
+          <div className="bg-primary rounded-full w-12 h-12 aspect-square	">
+            <img
+              src="https://picsum.photos/200/200"
+              className="rounded-full w-12 h-12"
+            />
+          </div>
+          <div className="flex flex-col justify-start space-y-1 my-auto ">
+            <p className="text-sm font-bold text-neutral-content">
+              Alexander Janssen
+            </p>
+            <p className="text-xs text-neutral-content">
+              ajn.janssen@gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* </div> */}
     </aside>
