@@ -6,7 +6,7 @@ function Block() {
       <figure>
         <img
           className="rounded-xl"
-          src="https://picsum.photos/300/300"
+          src="https://picsum.photos/400/400"
           alt="Shoes"
         />
       </figure>

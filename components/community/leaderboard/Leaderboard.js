@@ -3,7 +3,6 @@ import React from 'react'
 // import * as firebase from 'firebase/app'
 import firebase from 'firebase/app'
 import 'firebase/firestore'
-import initFirebase from '../../../firebase/clientApp'
 import { useState, useEffect } from 'react'
 
 import axios from 'axios'
@@ -22,12 +21,12 @@ function Leaderboard() {
           const query = db
             .collectionGroup('users')
             .orderBy('contributions', 'desc')
-            .limit(10)
-          console.log(query)
+            .limit(8)
+          // console.log(query)
           const data = await query.get()
-          console.log(data)
+          // console.log(data)
           const users = data.docs.map((doc) => doc.data())
-          console.log(users)
+          // console.log(users)
           setLeaderboard(users)
         } catch (error) {
           console.log(error)
@@ -54,7 +53,7 @@ function Leaderboard() {
         </p>
       </div>
 
-      <div className="bg-base-100 border  border-base-300 p-4 rounded-lg w-full">
+      <div className="bg-base-100 border  border-base-300 px-4 rounded-lg w-full">
         <div className="flex">
           <div className="flex flex-col w-full">
             {/* {leaderboard.map((item, index) => ( */}
