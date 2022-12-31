@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import Leaderboard from '../../components/community/leaderboard/Leaderboard'
 import Block from '../../components/community/ui/cards/Block'
@@ -13,17 +14,13 @@ function index() {
       <div class="max-w-8xl">
         <div className="flex space-x-5 overflow-auto overflow-invisble no-scrollbar">
           <Block />
-          <Block />
-          <Block />
-          <Block />
-          <Block />
-          <Block />
-          <Block />
         </div>
       </div>
-      <div className="w-full flex justify-end pt-4 ">
-        <button className="btn btn-sm ">See more skills</button>
-      </div>
+      <Link href="/Skills-catalog">
+        <div className="w-full flex justify-end pt-4 ">
+          <button className="btn btn-sm ">See more skills</button>
+        </div>
+      </Link>
       <div className="flex space-x-8 w-full">
         <div className="w-full">
           <div className="my-8">

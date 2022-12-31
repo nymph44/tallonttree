@@ -58,7 +58,9 @@ function Leaderboard() {
           <div className="flex flex-col w-full">
             {/* {leaderboard.map((item, index) => ( */}
             {isLoading ? (
-              <p>Loading...</p>
+              <div className="flex justify-center items-center">
+                <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-12 w-12"></div>
+              </div>
             ) : (
               leaderboard.map((leaderboard) => (
                 <>
