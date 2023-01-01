@@ -1,4 +1,5 @@
 import React from 'react'
+import Breadcrumb from '../../global/Breadcrumb'
 import Header from '../../ui/Header'
 
 function Slug({
@@ -17,6 +18,7 @@ function Slug({
       {/* <h1 className="text-2xl">{title}</h1> */}
       <div className="pt-4">
         <h1 className="font-bold text-4xl mb-4">{title}</h1>
+        <Breadcrumb origin="Community" page="title" />
       </div>
       <div className="my-4 flex space-x-4">
         <p className="text-base-content text-xs">

@@ -4,6 +4,7 @@ import 'firebase/firestore'
 import { useState, useEffect } from 'react'
 import firebase from 'firebase/app'
 import initFirebase from '../../../../firebase/clientApp'
+import Link from 'next/link'
 function Block() {
   const [skills, setSkills] = useState([])
   const [isLoading, setIsLoading] = useState(true)
@@ -46,21 +47,24 @@ function Block() {
               />
                */}
 
-              <div className="cursor-pointer group card  w-1/6 group-hover:bg-opacity-0 bg-error shadow-lg image-full">
+              <Link
+                href={{ pathname: '/Skill-preview', query: { id: 'id' } }}
+                className="cursor-pointer group card  w-1/6 group-hover:bg-opacity-0 bg-error shadow-lg image-full"
+              >
                 <figure>
                   <img
-                    className="rounded-xl w-full  group-hover:scale-125 transition duration-500"
+                    className="rounded-xl w-full  group-hover:scale-125 transition duration-300 ease-in-out"
                     src={skill.image}
                     alt={skill.title}
                   />
                 </figure>
                 <div className="card-body bottom-0">
-                  <h2 className="card-title group-hover:text-primary-focus">
+                  <h2 className="card-title group-hover:text-primary-focus transition-colors duration-300">
                     {skill.title}
                   </h2>
                   <p className="text-white text-sm">{skill.category}</p>
                 </div>
-              </div>
+              </Link>
             </>
           )
         })
