@@ -8,7 +8,7 @@ function index() {
         <p className="text-4xl">&nbsp;/&nbsp;</p>
         <h1 className=" text-2xl">Dutch</h1>
       </div>
-      <div className="bg-base-100 flex flex-col items-center rounded-xl p-4 my-4 w-1/6">
+      <div className="bg-base-200 flex flex-col items-center rounded-xl p-4 my-4 w-1/6">
         <div>
           <p>Due date</p>
         </div>
@@ -30,11 +30,11 @@ function index() {
           pariatur. Excepteur sint occaecat cupidatat non proident.”
         </p>
       </div>
-      <div className="bg-base-100 my-8 rounded-xl py-4 px-4">
+      <div className="bg-base-200 my-8 rounded-xl py-4 px-4">
         <h1 class="text-2xl">Subgoal KDA reflection</h1>
         <div className="flex py-4 w-full">
           <div className="w-1/6">
-            <div className="bg-base-100 rounded-xl p-4 flex space-y-4 flex-col">
+            <div className="bg-base-200 rounded-xl p-4 flex space-y-4 flex-col">
               <h2>Reflect</h2>
               <div className="bg-primary h-2.5 rounded-full"></div>
               <a href="/Kdarate">
@@ -45,7 +45,31 @@ function index() {
             </div>
           </div>
           <div className="w-5/6 flex">
-            <div className="w-1/6 flex flex-col justify-center items-center">
+            <ul className="steps w-full">
+              <li data-content="✓" className="step step-success">
+                Self-directed Learning
+              </li>
+              <li data-content="✓" className="step step-success">
+                Initiative
+              </li>
+              <li data-content="✓" className="step step-success">
+                Motivation
+              </li>
+              <li data-content="✓" className="step step-success">
+                P2P
+              </li>
+              <li data-content="●" className="step step-neutral">
+                Hub Participation
+              </li>
+              {/* <li data-content="●" className="step step-neutral">
+                Step 6
+              </li>
+              <li data-content="●" className="step step-neutral">
+                Step 7
+              </li> */}
+            </ul>
+
+            {/* <div className="w-1/6 flex flex-col justify-center items-center">
               <button className="btn btn-lg btn-circle btn-success">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +163,7 @@ function index() {
                 </svg>
               </button>
               <p className="mt-4">Hub Participation</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -149,7 +173,7 @@ function index() {
         necessary.
       </p>
       <div class="max-w-xl my-8">
-        <label class="flex justify-center w-full h-32 px-4 transition bg-base-300 border-2 border-base-100 border-dashed rounded-md appearance-none cursor-pointer hover:border-primary focus:outline-none">
+        <label class="flex justify-center w-full h-32 px-4 transition bg-base-300 border-2 border-base-300 border-dashed rounded-md appearance-none cursor-pointer hover:border-primary focus:outline-none">
           <span class="flex items-center space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"

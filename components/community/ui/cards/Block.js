@@ -3,10 +3,11 @@ import { skills } from '../../../../data/config'
 import 'firebase/firestore'
 import { useState, useEffect } from 'react'
 import firebase from 'firebase/app'
+import initFirebase from '../../../../firebase/clientApp'
 function Block() {
   const [skills, setSkills] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  // initFirebase()
+  initFirebase()
   useEffect(() => {
     const fetchData = async () => {
       ;(async () => {

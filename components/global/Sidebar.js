@@ -93,6 +93,7 @@ const Sidebar = () => {
 
             <p>Agenda</p>
           </Link>
+          <div className="divider"></div>
           <Link
             href={{ pathname: '/Community' }}
             className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-neutral-content hover:text-primary hover:bg-neutral-focus transition font-medium duration-200 items-center"
@@ -114,6 +115,46 @@ const Sidebar = () => {
 
             <p>Community</p>
           </Link>
+          <Link
+            href={{ pathname: '/Catalog' }}
+            className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-neutral-content hover:text-primary hover:bg-neutral-focus transition font-medium duration-200 items-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
+              />
+            </svg>
+
+            <p>Catalog</p>
+          </Link>
+          <div className="divider"></div>
+          <div className="px-4 flex space-x-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6 stroke-gray-500"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 11.25l1.5 1.5.75-.75V8.758l2.276-.61a3 3 0 10-3.675-3.675l-.61 2.277H12l-.75.75 1.5 1.5M15 11.25l-8.47 8.47c-.34.34-.8.53-1.28.53s-.94.19-1.28.53l-.97.97-.75-.75.97-.97c.34-.34.53-.8.53-1.28s.19-.94.53-1.28L12.75 9M15 11.25L12.75 9"
+              />
+            </svg>
+
+            <label className="uppercase text-sm text-gray-500">Pinned</label>
+          </div>
         </ul>
       </nav>
       {/* <div className="flex w-full space-x-4 sidebar-item-a"> */}

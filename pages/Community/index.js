@@ -16,7 +16,7 @@ function index() {
           <Block />
         </div>
       </div>
-      <Link href="/Skills-catalog">
+      <Link href="/Catalog">
         <div className="w-full flex justify-end pt-4 ">
           <button className="btn btn-sm ">See more skills</button>
         </div>

@@ -134,16 +134,16 @@ function Carousel() {
         </div>
       </div>
       <div className="flex justify-center w-full py-2 gap-2">
-        <a href="#item1" className="btn btn-xs">
+        <a href="#slide1" className="btn btn-xs">
           1
         </a>
-        <a href="#item2" className="btn btn-xs">
+        <a href="#slide2" className="btn btn-xs">
           2
         </a>
-        <a href="#item3" className="btn btn-xs">
+        <a href="#slide3" className="btn btn-xs">
           3
         </a>
-        <a href="#item4" className="btn btn-xs">
+        <a href="#slide4" className="btn btn-xs">
           4
         </a>
       </div>
