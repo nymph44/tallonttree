@@ -8,12 +8,13 @@ const Sidebar = () => {
     current.getMonth() + 1
   }/${current.getFullYear()}`
   return (
-    <aside className="relative  w-60 h-screen max-h-screen bg-base-300">
-      <div className="py-4 px-6 flex items-center space-x-4">
+    <aside className="relative  w-72 h-screen  bg-neutral">
+      <div className="pt-6 px-6 flex items-center space-x-4">
         <img src={sidebar.logo} alt="Logo" className="w-8" />
         <h1 className="font-bold text-primary">{sidebar.title}</h1>
       </div>
-      <nav className="py-4 w-full">
+      <div className="divider"></div>
+      <nav className="w-full">
         <ul className="font-medium w-full flex flex-col space-y-4">
           {/* {sidebar.links.map((link) => (
             <Link href={`${link}`} key={link} className="text-sm">
@@ -23,7 +24,7 @@ const Sidebar = () => {
             </Link>
           ))} */}
           <Link
-            className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-base-content hover:text-primary hover:bg-base-100 transition font-medium duration-200 items-center"
+            className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-neutral-content hover:text-primary hover:bg-neutral-focus transition font-medium duration-200 items-center"
             href={{
               pathname: '/Dashboard',
             }}
@@ -46,7 +47,7 @@ const Sidebar = () => {
             <p>Dashboard</p>
           </Link>
           <Link
-            className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-base-content hover:text-primary hover:bg-base-100 transition font-medium duration-200 items-center"
+            className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-neutral-content hover:text-primary hover:bg-neutral-focus transition font-medium duration-200 items-center"
             href={{
               pathname: '/Skills',
             }}
@@ -70,7 +71,7 @@ const Sidebar = () => {
           </Link>
 
           <Link
-            className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-base-content hover:text-primary hover:bg-base-100 transition font-medium duration-200 items-center"
+            className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-neutral-content hover:text-primary hover:bg-neutral-focus transition font-medium duration-200 items-center"
             href={{
               pathname: '/Agenda',
             }}
@@ -92,9 +93,10 @@ const Sidebar = () => {
 
             <p>Agenda</p>
           </Link>
+          <div className="divider"></div>
           <Link
             href={{ pathname: '/Community' }}
-            className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-base-content hover:text-primary hover:bg-base-100 transition font-medium duration-200 items-center"
+            className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-neutral-content hover:text-primary hover:bg-neutral-focus transition font-medium duration-200 items-center"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -113,14 +115,54 @@ const Sidebar = () => {
 
             <p>Community</p>
           </Link>
+          <Link
+            href={{ pathname: '/Catalog' }}
+            className="py-2 mx-2 flex px-4 space-x-4 rounded-full text-neutral-content hover:text-primary hover:bg-neutral-focus transition font-medium duration-200 items-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
+              />
+            </svg>
+
+            <p>Catalog</p>
+          </Link>
+          <div className="divider"></div>
+          <div className="px-4 flex space-x-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6 stroke-gray-500"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 11.25l1.5 1.5.75-.75V8.758l2.276-.61a3 3 0 10-3.675-3.675l-.61 2.277H12l-.75.75 1.5 1.5M15 11.25l-8.47 8.47c-.34.34-.8.53-1.28.53s-.94.19-1.28.53l-.97.97-.75-.75.97-.97c.34-.34.53-.8.53-1.28s.19-.94.53-1.28L12.75 9M15 11.25L12.75 9"
+              />
+            </svg>
+
+            <label className="uppercase text-sm text-gray-500">Pinned</label>
+          </div>
         </ul>
       </nav>
-
       {/* <div className="flex w-full space-x-4 sidebar-item-a"> */}
 
-      <nav className="py-4 w-56 flex flex-col space-y-8 absolute bottom-0">
-        <ul className="font-medium w-full flex flex-col space-y-4">
-          <li className="py-2 min-w-full  mx-2 flex px-4 space-x-2 rounded-full text-base-content hover:text-primary hover:bg-base-100 transition font-medium duration-200">
+      <div className="py-4 w-full flex flex-col  absolute bottom-0">
+        <div className="divider bottom-auto"></div>
+        <ul className="font-medium w-64 flex flex-col space-y-4">
+          <li className="py-2 min-w-full  mx-2 flex px-4 space-x-2 rounded-full text-neutral-content hover:text-primary hover:bg-neutral-focus  transition font-medium duration-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -148,7 +190,7 @@ const Sidebar = () => {
               {sidebar.settings}
             </Link>
           </li>
-          <li className="py-2 min-w-full  mx-2 flex px-4 space-x-2 rounded-full text-base-content hover:text-primary hover:bg-base-100 transition font-medium duration-200">
+          <li className="py-2 min-w-full  mx-2 flex px-4 space-x-2 rounded-full text-neutral-content hover:text-primary hover:bg-neutral-focus transition font-medium duration-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -172,7 +214,26 @@ const Sidebar = () => {
             </Link>
           </li>
         </ul>
-      </nav>
+        <div className="divider bottom-auto"></div>
+        <div className="px-6 flex space-x-4">
+          <div className=" flex bg-primary rounded-full w-12 h-12 aspect-square	">
+            <div className="avatar online">
+              <img
+                src="https://media.licdn.com/dms/image/C4D03AQFe9oneTfbu6g/profile-displayphoto-shrink_800_800/0/1538600782762?e=1678320000&v=beta&t=_KcJ3soYitVCFk6k8o8kbRxA1TtRYLdF4cuW4EmOovM"
+                className="rounded-full w-12 h-12"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col justify-start space-y-1 my-auto ">
+            <p className="text-sm font-bold text-neutral-content">
+              Alexander Janssen
+            </p>
+            <p className="text-xs text-neutral-content">
+              ajn.janssen@gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* </div> */}
     </aside>

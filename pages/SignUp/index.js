@@ -1,7 +1,51 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
+import firebase from 'firebase/app'
+import 'firebase/firestore'
+import initFirebase from '../../firebase/clientApp'
 
 function index() {
+  // const WriteToCloudFirestore = () => {
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('')
+  const [id, setId] = useState()
+  const [contributions, setContributions] = useState()
+
+  const randomId = (min, max) => {
+    return setId(Math.floor(Math.random() * (max - min + 1)) + min)
+  }
+  const setRandomContributions = (min, max) => {
+    return setContributions(Math.floor(Math.random() * (max - min + 1)) + min)
+  }
+  console.log(firstName)
+  const CreateUser = () => {
+    setRandomContributions(151, 1899)
+    // initFirebase()
+    try {
+      randomId(999999, 9999999)
+      console.log(contributions)
+      firebase
+        .firestore()
+        .collection('users')
+        .doc('user' + id)
+        .set({
+          id: id,
+          fname: firstName,
+          lname: lastName,
+          username: username,
+          password: password,
+          email: email,
+          profilePic: 'https://picsum.photos/200',
+          contributions: Math.floor(Math.random() * (1899 - 151 + 1)) + 151,
+        })
+        .then(alert('Data successfully written!'))
+    } catch (error) {
+      console.log(error)
+    }
+  }
   return (
     <section className=" gradient-form md:h-screen">
       <div className="container px-6 ">
@@ -31,6 +75,8 @@ function index() {
                           className="form-control block w-full px-3 py-1.5 text-base-content  font-normal  bg-base-200 bg-clip-padding border border-solid border-base-300 rounded transition ease-in-out m-0 focus:text-base-content  focus:bg-base-100 focus:border-primary-focus focus:outline-none"
                           id="exampleFormControlInput1"
                           placeholder="First name"
+                          onChange={(event) => setFirstName(event.target.value)}
+                          required
                         />
                       </div>
 
@@ -40,12 +86,14 @@ function index() {
                           className="form-control block w-full px-3 py-1.5 text-base-content  font-normal  bg-base-200 bg-clip-padding border border-solid border-base-300 rounded transition ease-in-out m-0 focus:text-base-content  focus:bg-base-100 focus:border-primary-focus focus:outline-none"
                           id="exampleFormControlInput1"
                           placeholder="Last name"
+                          onChange={(event) => setLastName(event.target.value)}
+                          required
                         />
                       </div>
 
                       {/* Datepicker */}
 
-                      <div class="relative">
+                      {/* <div class="relative">
                         <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                           <svg
                             aria-hidden="true"
@@ -67,7 +115,7 @@ function index() {
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                           placeholder="Select date"
                         />
-                      </div>
+                      </div> */}
 
                       <div className="mb-4">
                         <input
@@ -75,6 +123,8 @@ function index() {
                           className="form-control block w-full px-3 py-1.5 text-base-content  font-normal  bg-base-200 bg-clip-padding border border-solid border-base-300 rounded transition ease-in-out m-0 focus:text-base-content  focus:bg-base-100 focus:border-primary-focus focus:outline-none"
                           id="exampleFormControlInput1"
                           placeholder="Username"
+                          onChange={(event) => setUsername(event.target.value)}
+                          required
                         />
                       </div>
                       <div class="mb-4">
@@ -83,22 +133,26 @@ function index() {
                           className="form-control block w-full px-3 py-1.5 text-base-content  font-normal  bg-base-200 bg-clip-padding border border-solid border-base-300 rounded transition ease-in-out m-0 focus:text-base-content  focus:bg-base-100 focus:border-primary-focus focus:outline-none"
                           id="exampleFormControlInput1"
                           placeholder="Password"
+                          onChange={(event) => setPassword(event.target.value)}
+                          required
                         />
                       </div>
-                      <div class="mb-4">
+                      {/* <div class="mb-4">
                         <input
                           type="password"
                           className="form-control block w-full px-3 py-1.5 text-base-content  font-normal  bg-base-200 bg-clip-padding border border-solid border-base-300 rounded transition ease-in-out m-0 focus:text-base-content  focus:bg-base-100 focus:border-primary-focus focus:outline-none"
                           id="exampleFormControlInput1"
                           placeholder="Confirm password"
                         />
-                      </div>
+                      </div> */}
                       <div class="mb-4">
                         <input
                           type="email"
                           className="form-control block w-full px-3 py-1.5 text-base-content  font-normal  bg-base-200 bg-clip-padding border border-solid border-base-300 rounded transition ease-in-out m-0 focus:text-base-content  focus:bg-base-100 focus:border-primary-focus focus:outline-none"
                           id="exampleFormControlInput1"
                           placeholder="Your email"
+                          onChange={(event) => setEmail(event.target.value)}
+                          required
                         />
                       </div>
                       <div class="text-center pt-1 mb-12 pb-1">
@@ -107,6 +161,7 @@ function index() {
                           type="button"
                           data-mdb-ripple="true"
                           data-mdb-ripple-color="light"
+                          onClick={CreateUser}
                         >
                           Create account
                         </button>

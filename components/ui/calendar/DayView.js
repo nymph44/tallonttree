@@ -6,7 +6,7 @@ import interactionPlugin from '@fullcalendar/interaction' // needed for dayClick
 
 function DayView() {
   return (
-    <div className="bg-base-100 border h-96 border-base-300 rounded-xl p-4 pb-5 ml-4 w-full pr-4 ">
+    <div className="bg-base-200 border h-96 border-base-300 rounded-xl p-4 pb-5 ml-4 w-full pr-4 ">
       <FullCalendar
         height="50%"
         plugins={[dayGridPlugin]}

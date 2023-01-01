@@ -4,7 +4,7 @@ import Chart from 'chart.js/auto'
 import { lineData } from '../../../../data/config'
 
 function LineChart() {
-  return <Line data={lineData} width={400} height={400} />
+  return <Line data={lineData} height={100} />
 }
 
 export default LineChart

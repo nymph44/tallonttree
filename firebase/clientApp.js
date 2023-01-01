@@ -1,6 +1,9 @@
 import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/firestore'
+import 'firebase/storage'
+// import 'firebase/analytics'
+// import 'firebase/performance'
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -11,15 +14,32 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 }
 
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig)
+// if (!firebase.apps.length) {
+//   firebase.initializeApp(firebaseConfig)
+// }
+
+export default function initFirebase() {
+  if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig)
+    // Check that `window` is in scope for the analytics module!
+    if (typeof window !== 'undefined') {
+      // Enable analytics. https://firebase.google.com/docs/analytics/get-started
+      if ('measurementId' in firebaseConfig) {
+        firebase.analytics()
+        firebase.performance()
+      }
+    }
+    console.log('Firebase app initialized')
+  }
 }
 
-export const auth = firebase.auth()
-export const googleAuthProvider = new firebase.auth.GoogleAuthProvider()
-export const facebookAuthProvider = new firebase.auth.FacebookAuthProvider()
-export const twitterAuthProvider = new firebase.auth.TwitterAuthProvider()
-export const githubAuthProvider = new firebase.auth.GithubAuthProvider()
-export const firestore = firebase.firestore()
+initFirebase()
 
-export default firebase
+// export const auth = firebase.auth()
+// export const googleAuthProvider = new firebase.auth.GoogleAuthProvider()
+// export const facebookAuthProvider = new firebase.auth.FacebookAuthProvider()
+// export const twitterAuthProvider = new firebase.auth.TwitterAuthProvider()
+// export const githubAuthProvider = new firebase.auth.GithubAuthProvider()
+// export const firestore = firebase.firestore()
+
+// export default firebase
