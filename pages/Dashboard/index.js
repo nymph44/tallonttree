@@ -16,7 +16,7 @@ function Dashboard() {
         {/* <WriteToCloudFirestore /> */}
         <div className="flex">
           <div className="w-1/2 border border-base-300 bg-base-200 rounded-xl px-2 flex space-x-4">
-            <div className="w-full">
+            <div className="w-full ">
               <LineChart />
             </div>
           </div>

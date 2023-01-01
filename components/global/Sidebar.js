@@ -216,11 +216,13 @@ const Sidebar = () => {
         </ul>
         <div className="divider bottom-auto"></div>
         <div className="px-6 flex space-x-4">
-          <div className="bg-primary rounded-full w-12 h-12 aspect-square	">
-            <img
-              src="https://picsum.photos/200/200"
-              className="rounded-full w-12 h-12"
-            />
+          <div className=" flex bg-primary rounded-full w-12 h-12 aspect-square	">
+            <div className="avatar online">
+              <img
+                src="https://media.licdn.com/dms/image/C4D03AQFe9oneTfbu6g/profile-displayphoto-shrink_800_800/0/1538600782762?e=1678320000&v=beta&t=_KcJ3soYitVCFk6k8o8kbRxA1TtRYLdF4cuW4EmOovM"
+                className="rounded-full w-12 h-12"
+              />
+            </div>
           </div>
           <div className="flex flex-col justify-start space-y-1 my-auto ">
             <p className="text-sm font-bold text-neutral-content">
