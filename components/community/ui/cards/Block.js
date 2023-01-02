@@ -17,7 +17,6 @@ function Block() {
           const query = db.collectionGroup('PopularSkills')
           const data = await query.get()
           const skills = data.docs.map((doc) => doc.data())
-          console.log(skills)
           setSkills(skills)
         } catch (error) {
           console.log(error)

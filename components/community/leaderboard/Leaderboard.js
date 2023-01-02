@@ -22,11 +22,11 @@ function Leaderboard() {
             .collectionGroup('users')
             .orderBy('contributions', 'desc')
             .limit(8)
-          // console.log(query)
+
           const data = await query.get()
-          // console.log(data)
+
           const users = data.docs.map((doc) => doc.data())
-          // console.log(users)
+
           setLeaderboard(users)
         } catch (error) {
           console.log(error)
@@ -37,12 +37,6 @@ function Leaderboard() {
     }
     fetchData()
   }, [])
-  // const db = firebase.firestore()
-  // const query = db
-  //   .collectionGroup('users')
-  //   .orderBy('contributions', 'desc')
-  //   .limit(10)
-  // console.log(query)
   return (
     <div className="w-full ">
       <div className="mt-8 mb-4">
