@@ -36,7 +36,9 @@
     "react-chartjs-2": "^5.0.1",
     "react-dom": "18.2.0",
     "react-froala-wysiwyg": "^4.0.16",
+    "react-google-charts": "^4.0.0",
     "react-router-dom": "^6.5.0",
+    "react-timelines": "^2.6.1",
     "smart-webcomponents-react": "^14.4.0",
     "theme-change": "^2.2.0"
   },

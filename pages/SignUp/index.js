@@ -20,13 +20,12 @@ function index() {
   const setRandomContributions = (min, max) => {
     return setContributions(Math.floor(Math.random() * (max - min + 1)) + min)
   }
-  console.log(firstName)
   const CreateUser = () => {
     setRandomContributions(151, 1899)
     // initFirebase()
     try {
       randomId(999999, 9999999)
-      console.log(contributions)
+
       firebase
         .firestore()
         .collection('users')

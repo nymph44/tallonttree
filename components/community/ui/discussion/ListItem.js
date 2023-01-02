@@ -23,7 +23,7 @@ function ListItem() {
             .limit(8)
           const data = await query.get()
           const discussions = data.docs.map((doc) => doc.data())
-          // console.log(discussions)
+
           setDiscussions(discussions)
         } catch (error) {
           console.log(error)
