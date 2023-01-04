@@ -22,7 +22,6 @@
     "@fullcalendar/timegrid": "^6.0.2",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.0",
-    "@next-auth/firebase-adapter": "^0.1.2-pr.183-76202b42.8",
     "@next/font": "13.0.7",
     "@react-firebase/auth": "^0.2.10",
     "axios": "^1.2.1",
