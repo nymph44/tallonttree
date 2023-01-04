@@ -1,4 +1,5 @@
 import { height } from '@mui/system'
+import { getSession } from 'next-auth/react'
 import React from 'react'
 import Viewed from '../../components/catalog/Viewed/Viewed'
 import Block from '../../components/community/ui/cards/Block'
@@ -30,7 +31,7 @@ function index() {
               <Block />
             </div>
           </div>
-          <div className="w-1/5">
+          <div className="w-1/5 pt-4">
             <Viewed />
           </div>
         </div>
@@ -40,3 +41,18 @@ function index() {
 }
 
 export default index
+
+export const getServerSideProps = async (context) => {
+  const session = await getSession(context)
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/Login',
+      },
+    }
+  }
+
+  return {
+    props: { session },
+  }
+}

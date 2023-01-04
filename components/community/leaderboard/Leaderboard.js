@@ -6,13 +6,14 @@ import 'firebase/firestore'
 import { useState, useEffect } from 'react'
 
 import axios from 'axios'
+import { getSession, useSession } from 'next-auth/react'
 
 // initFirebase()
 
 function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-
+  const { data: session, status } = useSession()
   useEffect(() => {
     const fetchData = async () => {
       ;(async () => {
@@ -21,7 +22,7 @@ function Leaderboard() {
           const query = db
             .collectionGroup('users')
             .orderBy('contributions', 'desc')
-            .limit(8)
+            .limit(12)
 
           const data = await query.get()
 
@@ -47,7 +48,7 @@ function Leaderboard() {
         </p>
       </div>
 
-      <div className="bg-base-100 border  border-base-300 px-4 rounded-lg w-full">
+      <div className="bg-base-200 border  border-base-300 px-4 rounded-lg w-full">
         <div className="flex">
           <div className="flex flex-col w-full">
             {/* {leaderboard.map((item, index) => ( */}

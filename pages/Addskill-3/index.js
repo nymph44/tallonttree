@@ -1,6 +1,34 @@
+import { getSession } from 'next-auth/react'
 import Link from 'next/link'
-import React from 'react'
+import Router, { useRouter } from 'next/router'
+import React, { useState } from 'react'
 function index() {
+  const [skillTime, setSkillTime] = useState('')
+
+  console.log(skillTime)
+  function sendProps3() {
+    Router.push({
+      pathname: '/Addskill-4',
+      query: {
+        skillKnowledge: props.skillKnowledge,
+        skillTitle: props.skillTitle,
+        skillTime: skillTime,
+      },
+    })
+  }
+
+  const router = useRouter()
+
+  const {
+    query: { skillTitle, skillKnowledge },
+  } = router
+
+  const props = {
+    skillTitle,
+    skillKnowledge,
+    skillTime,
+  }
+
   return (
     <div className="flex flex-col items-center h-full -mt-10">
       <div className="w-full flex flex-col justify-center items-center my-auto relative space-y-16">
@@ -17,6 +45,7 @@ function index() {
             max="100"
             className="range range-primary"
             step="25"
+            onChange={(event) => setSkillTime(event.target.value)}
           />
           <div className="w-full flex justify-between text-xs px-2">
             <span className="text-lg font-bold">{'< 1'}</span>
@@ -31,12 +60,27 @@ function index() {
         <Link href="/Addskill-2">
           <button className="btn btn-primary">Back</button>
         </Link>
-        <Link href="/Addskill-4">
+        <a onClick={() => sendProps3()}>
           <button className="btn btn-primary">Next</button>
-        </Link>
+        </a>
       </div>
     </div>
   )
 }
 
 export default index
+
+export const getServerSideProps = async (context) => {
+  const session = await getSession(context)
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/Login',
+      },
+    }
+  }
+
+  return {
+    props: { session },
+  }
+}

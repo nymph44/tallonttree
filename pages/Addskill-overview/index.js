@@ -1,23 +1,82 @@
 import Link from 'next/link'
 import React from 'react'
-
+import Router, { useRouter } from 'next/router'
+import firebase from 'firebase/app'
+import 'firebase/firestore'
+import initFirebase from '../../firebase/clientApp'
+import { getSession, useSession } from 'next-auth/react'
 function index() {
+  const { data: session, status } = useSession()
+  const router = useRouter()
+
+  const {
+    query: {
+      skillTitle,
+      skillKnowledge,
+      skillTime,
+      subskill1,
+      subskill2,
+      subskill3,
+    },
+  } = router
+
+  const props = {
+    skillTitle,
+    skillKnowledge,
+    skillTime,
+    subskill1,
+    subskill2,
+    subskill3,
+  }
+
+  console.log(
+    props.skillTitle,
+    props.skillKnowledge,
+    props.skillTime,
+    props.subskill1,
+    props.subskill2,
+    props.subskill3,
+  )
+
+  const CreateSkill = () => {
+    initFirebase()
+    console.log(skillTime)
+    try {
+      firebase
+        .firestore()
+        .collection('mySkills')
+        .doc(props.skillTitle)
+        .set({
+          id: props.skillTitle,
+          skillTitle: props.skillTitle,
+          skillKnowledge: props.skillKnowledge,
+          skillTime: props.skillTime,
+          subskill1: props.subskill1,
+          subskill2: props.subskill2,
+          subskill3: props.subskill3,
+          user: session.user.email,
+          // dateCreated: new Date(),
+        })
+        .then(alert('Data successfully written!'))
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  function finalizeProps() {
+    CreateSkill()
+    Router.push({
+      pathname: '/Dashboard',
+    })
+  }
   return (
     <div className="flex space-x-8">
       <div className="w-1/2 bg-base-100 p-4 rounded-xl">
         <h2 className="text-2xl font-bold">Overview</h2>
+        <h2 className="text-xl">{props.skillTitle}</h2>
         <div className="my-4 flex flex-col space-y-4">
           <p className=" text-sm font-light text-gray-500">My desired skill</p>
-          <p className="text-xs">
-            I would like to learn "Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum."
-          </p>
+          <p className="text-xs">{props.skillKnowledge}</p>
           <div className="divider"></div>
         </div>
         <div>
@@ -43,7 +102,9 @@ function index() {
                 />
               </svg>
 
-              <p className="text-sm  font-bold text-primary">3 months</p>
+              <p className="text-sm  font-bold text-primary">
+                {props.skillTime} months
+              </p>
             </div>
           </div>
         </div>
@@ -51,38 +112,18 @@ function index() {
           <h2 className="text-xl">Subgoals</h2>
           <div className="flex flex-wrap basis-2 mt-4">
             <div className="w-1/2 pr-4">
+              <p className="text-xs">{props.subskill1}</p>
+              <div className="divider"></div>
+            </div>
+            <div className="w-1/2 pr-4">
               <p className="text-xs">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum."
+                {props.subskill2 ? props.subskill2 : 'No subskill added'}
               </p>
               <div className="divider"></div>
             </div>
             <div className="w-1/2 pr-4">
               <p className="text-xs">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum."
-              </p>
-              <div className="divider"></div>
-            </div>
-            <div className="w-1/2 pr-4">
-              <p className="text-xs">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum."
+                {props.subskill3 ? props.subskill3 : 'No subskill added'}
               </p>
               <div className="divider"></div>
             </div>
@@ -95,9 +136,9 @@ function index() {
           <p className="text-xl">Generated roadmap for your skill</p>
         </div>
         <div className=" flex justify-end">
-          <Link href="/Dashboard">
+          <a onClick={() => finalizeProps()}>
             <button className="btn btn-primary">Accept and save</button>
-          </Link>
+          </a>
         </div>
       </div>
     </div>
@@ -105,3 +146,18 @@ function index() {
 }
 
 export default index
+
+export const getServerSideProps = async (context) => {
+  const session = await getSession(context)
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/Login',
+      },
+    }
+  }
+
+  return {
+    props: { session },
+  }
+}

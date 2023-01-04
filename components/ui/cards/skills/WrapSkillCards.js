@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { skillsAll } from '../../../../data/config'
+
 function WrapSkillCards() {
   return (
     <div className="py-4 flex flex-wrap gap-4">
@@ -14,7 +15,10 @@ function WrapSkillCards() {
           </div>
           <div className="w-full flex justify-end">
             <Link
-              href={{ pathname: '/Skill', query: { id: index } }}
+              href={{
+                pathname: '/Skill/' + skillsAll.id[index],
+                // query: { id: skillsAll.id[index] },
+              }}
               className="text-accent w-full "
             >
               <button className="btn btn-sm btn-outline btn-primary">

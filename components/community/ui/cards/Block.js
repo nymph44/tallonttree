@@ -8,7 +8,7 @@ import Link from 'next/link'
 function Block() {
   const [skills, setSkills] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  initFirebase()
+  // initFirebase()
   useEffect(() => {
     const fetchData = async () => {
       ;(async () => {
@@ -38,17 +38,9 @@ function Block() {
         skills.map((skill, index) => {
           return (
             <>
-              {/* <Card
-                key={index}
-                title={skill.title}
-                image={skill.image}
-                category={skill.category}
-              />
-               */}
-
               <Link
                 href={{ pathname: '/Skill-preview', query: { id: 'id' } }}
-                className="cursor-pointer group card  w-1/6 group-hover:bg-opacity-0 bg-error shadow-lg image-full"
+                className="cursor-pointer group card  w-1/6 group-hover:bg-opacity-0  shadow-lg image-full"
               >
                 <figure>
                   <img

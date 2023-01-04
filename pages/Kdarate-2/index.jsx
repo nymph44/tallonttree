@@ -15,25 +15,13 @@ function index() {
   const { View } = useLottie(options)
 
   return (
-    <div className="flex flex-col items-center h-[calc(100vh-120px)] -mt-10 my-auto">
-      <div className="w-1/4">{View}</div>
+    <div className="flex flex-col items-center h-full -mt-10">
+      {/* <LottiePlayer animationData={meditating} loop={true} /> */}
+      <div className="w-96">{View}</div>
+
       <Rate />
-      {/* <ProgressKDA /> */}
-      <div className="bottom-0 mb-4 w-full flex justify-between">
-        <div className="">
-          <button className="btn">Back</button>
-        </div>
-        <ul className="steps">
-          <li className="step step-primary">Self Directed Learning</li>
-          <li className="step">Initiative</li>
-          <li className="step">Motivation</li>
-          <li className="step">P2P</li>
-          <li className="step">Hub Participation</li>
-        </ul>
-        <div className="">
-          <button className="btn">Next</button>
-        </div>
-      </div>
+      {/* <Argument /> */}
+      <ProgressKDA />
     </div>
   )
 }

@@ -2,10 +2,8 @@ import React from 'react'
 import firebase from 'firebase/app'
 import 'firebase/firestore'
 import { useState, useEffect } from 'react'
-import initFirebase from '../../../firebase/clientApp'
 
 function Completionist() {
-  initFirebase
   const [completionist, setCompletionist] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   console.log(completionist)
