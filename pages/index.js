@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import { meta } from '../data/config'
-
+import initFirebase from '../firebase/clientApp'
 const inter = Inter({ subsets: ['latin'] })
 
 // export const getStaticProps = async () => {
@@ -9,6 +9,8 @@ const inter = Inter({ subsets: ['latin'] })
 // }
 
 export default function index() {
+  initFirebase()
+
   return (
     <>
       <Head>

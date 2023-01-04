@@ -1,13 +1,36 @@
-import { getSession } from 'next-auth/react'
-import React from 'react'
+import { skillsAll } from '../../data/config'
 
-function index() {
+export const getStaticPaths = async () => {
+  const paths = skillsAll.id.map((skill) => {
+    return {
+      params: { id: skill.toString() },
+    }
+  })
+  return {
+    paths,
+    fallback: false,
+  }
+}
+
+export const getStaticProps = async (context) => {
+  const id = context.params.id
+  const skill = skillsAll.title[id]
+  const skillDescription = skillsAll.description[id]
+  return {
+    props: { skill, skillDescription },
+  }
+}
+
+const Details = ({ skill, skillDescription }) => {
+  console.log(skill)
+  console.log(skillDescription)
   return (
     <div>
       <div className="pt-4 flex">
         <h1 className="font-bold text-4xl">Skills</h1>
         <p className="text-4xl">&nbsp;/&nbsp;</p>
-        <h1 className=" text-2xl">Dutch</h1>
+
+        <h1 className=" text-2xl">{skill}</h1>
       </div>
       <div className="bg-base-200 flex flex-col items-center rounded-xl p-4 my-4 w-1/6">
         <div>
@@ -21,15 +44,9 @@ function index() {
         </div>
       </div>
       {/* description */}
-      <div>
-        <p class="text-xs w-3/4">
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident.”
-        </p>
+      <div className="bg-base-200  w-3/4 p-4 rounded-lg flex flex-col space-y-4">
+        <h1 class="text-2xl font-bold">Description</h1>
+        <p class="text-md">{skillDescription}</p>
       </div>
       <div className="bg-base-200 my-8 rounded-xl py-4 px-4">
         <h1 class="text-2xl">Subgoal KDA reflection</h1>
@@ -100,19 +117,4 @@ function index() {
   )
 }
 
-export default index
-
-export const getServerSideProps = async (context) => {
-  const session = await getSession(context)
-  if (!session) {
-    return {
-      redirect: {
-        destination: '/Login',
-      },
-    }
-  }
-
-  return {
-    props: { session },
-  }
-}
+export default Details

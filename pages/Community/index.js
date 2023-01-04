@@ -1,3 +1,4 @@
+import { getSession } from 'next-auth/react'
 import Link from 'next/link'
 import React from 'react'
 import Leaderboard from '../../components/community/leaderboard/Leaderboard'
@@ -29,7 +30,7 @@ function index() {
               View all 556 discussions
             </button>
           </div>
-          <div className=" -mt-2 p-4 rounded-xl bg-base-100 border border-base-300">
+          <div className=" -mt-2 p-4 rounded-xl bg-base-200 border border-base-300">
             <div className="flex">
               <div className="flex flex-col w-full">
                 <ListItem />
@@ -37,7 +38,7 @@ function index() {
             </div>
           </div>
         </div>
-        <div className="w-1/3">
+        <div className="w-1/3 ">
           <Leaderboard />
         </div>
       </div>
@@ -46,3 +47,18 @@ function index() {
 }
 
 export default index
+
+export const getServerSideProps = async (context) => {
+  const session = await getSession(context)
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/Login',
+      },
+    }
+  }
+
+  return {
+    props: { session },
+  }
+}

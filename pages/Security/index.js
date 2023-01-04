@@ -1,3 +1,4 @@
+import { getSession } from 'next-auth/react'
 import Link from 'next/link'
 import React from 'react'
 
@@ -86,3 +87,18 @@ function index() {
 }
 
 export default index
+
+export const getServerSideProps = async (context) => {
+  const session = await getSession(context)
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/Login',
+      },
+    }
+  }
+
+  return {
+    props: { session },
+  }
+}

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import firebase from 'firebase/app'
 import 'firebase/firestore'
-import initFirebase from '../../firebase/clientApp'
+// import initFirebase from '../../firebase/clientApp'
 
 function index() {
   // const WriteToCloudFirestore = () => {

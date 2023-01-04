@@ -1,15 +1,37 @@
 import React from 'react'
 import Header from '../../components/ui/Header'
 
-import { user } from '../../data/config'
 import RowSkillCards from '../../components/ui/cards/skills/RowSkillCards'
 import LineChart from '../../components/ui/charts/linechart/LineChart'
 import DayView from '../../components/ui/calendar/DayView'
-import WriteToCloudFirestore from '../../components/cloudFirestore/Write'
+import { useSession, signOut, getSession } from 'next-auth/react'
+import firebase from 'firebase/app'
 function Dashboard() {
+  const { data: session, status } = useSession()
+  const CreateUser = () => {
+    try {
+      firebase
+        .firestore()
+        .collection('users')
+        .doc(session.user.email)
+        .set({
+          fname: session.user.name.split(' ')[0],
+          lname: session.user.name.split(' ')[1],
+          username: session.user.name.split(' ')[0],
+          email: session.user.email,
+          profilePic: session.user.image,
+          contributions: Math.floor(Math.random() * (1899 - 151 + 1)) + 151,
+        })
+      // .then(alert('Data successfully written!'))
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  CreateUser()
   return (
     <div>
-      <Header title="Dashboard" user={user.name} />
+      <Header title="Dashboard" user={session.user.name} />
       <RowSkillCards />
       <div className="w-full">
         <h1 className="font-bold mb-4">Your activity</h1>
@@ -224,3 +246,18 @@ function Dashboard() {
 }
 
 export default Dashboard
+
+export const getServerSideProps = async (context) => {
+  const session = await getSession(context)
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/Login',
+      },
+    }
+  }
+
+  return {
+    props: { session },
+  }
+}

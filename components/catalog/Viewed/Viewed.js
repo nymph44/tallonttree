@@ -6,7 +6,7 @@ import initFirebase from '../../../firebase/clientApp'
 function Viewed() {
   const [skills, setSkills] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  initFirebase()
+  // initFirebase()
   useEffect(() => {
     const fetchData = async () => {
       ;(async () => {
@@ -26,26 +26,23 @@ function Viewed() {
     fetchData()
   }, [])
   return (
-    <div class="pl-4 pt-4">
+    <div class="pl-4 pt-12 -mt-1">
       <div className="overflow-x-auto w-full">
         <table className="table w-full bg-base-300 rounded-xl">
           <thead>
             <tr>
-              {/* <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th> */}
-              <th className="bg-opacity-0">Most Viewed skills</th>
-              {/* <th>Job</th>
-              <th></th> */}
+              <th className="bg-opacity-0">Last Viewed skills</th>
             </tr>
           </thead>
           <tbody>
             {isLoading ? (
-              <div className="flex justify-center items-center">
-                <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-12 w-12"></div>
-              </div>
+              <tr>
+                <td>
+                  <div className="flex justify-center items-center">
+                    <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-12 w-12"></div>
+                  </div>
+                </td>
+              </tr>
             ) : (
               skills.map((skill, index) => {
                 return (

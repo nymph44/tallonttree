@@ -4,6 +4,7 @@ import Respond from '../../components/community/respond'
 import Related from '../../components/community/related'
 import Linked from '../../components/community/linked'
 import Formrespons from '../../components/community/form-respons'
+import { getSession } from 'next-auth/react'
 function index() {
   return (
     <div className="flex w-full space-x-8">
@@ -54,3 +55,18 @@ function index() {
 }
 
 export default index
+
+export const getServerSideProps = async (context) => {
+  const session = await getSession(context)
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/Login',
+      },
+    }
+  }
+
+  return {
+    props: { session },
+  }
+}

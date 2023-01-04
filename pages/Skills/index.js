@@ -1,9 +1,33 @@
+import { getSession, useSession } from 'next-auth/react'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import WrapSkillCards from '../../components/ui/cards/skills/WrapSkillCards'
 import Header from '../../components/ui/Header'
 import { user } from '../../data/config'
+import initFirebase from '../../firebase/clientApp'
+import firebase from 'firebase/app'
 function index() {
+  const { data: session, status } = useSession()
+  const [isLoading, setIsLoading] = useState(true)
+  const [unApprovedSkills, setUnApprovedSkills] = useState([])
+  useEffect(() => {
+    initFirebase()
+    const db = firebase.firestore()
+    const unsubscribe = db
+      .collection('mySkills')
+      .where('user', '==', session.user.email)
+      // .where('approved', '==', false)
+      .onSnapshot((snapshot) => {
+        const newUnApprovedSkills = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }))
+        setUnApprovedSkills(newUnApprovedSkills)
+        setIsLoading(false)
+      })
+    return () => unsubscribe()
+  }, [])
+
   return (
     <>
       <div className="py-4">
@@ -14,17 +38,27 @@ function index() {
         <div className="py-4">
           <h3 className="font-semibold text-xl">Waiting for approval</h3>
           <div className="py-4 flex flex-wrap gap-4">
-            <div className="w-1/4 bg-base-200 border border-base-300 rounded-xl p-4">
-              <h1 className="font-bold mb-4">Test</h1>
-              <div className="w-full bg-accent rounded-full h-2.5 mb-4">
-                <div className={`bg-gray-300 h-2.5 rounded-full `}></div>
+            {isLoading ? (
+              <div className="flex justify-center items-center">
+                <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-12 w-12"></div>
               </div>
-              <div className="w-full flex justify-end">
-                <button className="btn btn-sm btn-outline  btn-disabled">
-                  Waiting for approval
-                </button>
-              </div>
-            </div>
+            ) : (
+              unApprovedSkills.map((unApprovedSkills, index) => {
+                return (
+                  <div className="w-1/4 bg-base-200 border border-base-300 rounded-xl p-4">
+                    <h1 className="font-bold mb-4">{unApprovedSkills.id}</h1>
+                    <div className="w-full bg-accent rounded-full h-2.5 mb-4">
+                      <div className={`bg-gray-300 h-2.5 rounded-full `}></div>
+                    </div>
+                    <div className="w-full flex justify-end">
+                      <button className="btn btn-sm btn-outline  btn-disabled">
+                        Waiting for approval
+                      </button>
+                    </div>
+                  </div>
+                )
+              })
+            )}
             <div className="w-32 border bg-base-200 border-base-300 rounded-xl flex flex-col mt-4 pt-4 bottom-0 p-4">
               <div className="flex justify-center ">
                 <svg
@@ -59,3 +93,18 @@ function index() {
 }
 
 export default index
+
+export const getServerSideProps = async (context) => {
+  const session = await getSession(context)
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/Login',
+      },
+    }
+  }
+
+  return {
+    props: { session },
+  }
+}

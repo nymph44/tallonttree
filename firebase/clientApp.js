@@ -1,7 +1,9 @@
 import firebase from 'firebase/app'
-import 'firebase/auth'
-import 'firebase/firestore'
+// import 'firebase/auth'
+import { getFirestore } from 'firebase/firestore'
 import 'firebase/storage'
+import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
+
 // import 'firebase/analytics'
 // import 'firebase/performance'
 
@@ -14,9 +16,9 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 }
 
-// if (!firebase.apps.length) {
-//   firebase.initializeApp(firebaseConfig)
-// }
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig)
+}
 
 export default function initFirebase() {
   if (!firebase.apps.length) {
@@ -35,8 +37,13 @@ export default function initFirebase() {
 
 initFirebase()
 
-// export const auth = firebase.auth()
-// export const googleAuthProvider = new firebase.auth.GoogleAuthProvider()
+const db = firebase.firestore()
+
+// const app = getApps.length > 0 ? getApp() : initializeApp(firebaseConfig)
+
+export const auth = firebase.auth()
+export const googleAuthProvider = new firebase.auth.GoogleAuthProvider()
+// console.log('googleAuthProvider', googleAuthProvider)
 // export const facebookAuthProvider = new firebase.auth.FacebookAuthProvider()
 // export const twitterAuthProvider = new firebase.auth.TwitterAuthProvider()
 // export const githubAuthProvider = new firebase.auth.GithubAuthProvider()

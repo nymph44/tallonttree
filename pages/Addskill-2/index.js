@@ -1,6 +1,30 @@
+import { getSession } from 'next-auth/react'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
+import Router, { useRouter } from 'next/router'
 function index() {
+  const [skillKnowledge, setSkillKnowledge] = useState('')
+  console.log(skillKnowledge)
+  function sendProps2() {
+    Router.push({
+      pathname: '/Addskill-3',
+      query: {
+        skillKnowledge: props.skillKnowledge,
+        skillTitle: props.skillTitle,
+      },
+    })
+  }
+  const router = useRouter()
+
+  const {
+    query: { skillTitle },
+  } = router
+
+  const props = {
+    skillTitle,
+    skillKnowledge,
+  }
+
   return (
     <div className="flex flex-col items-center h-full -mt-10">
       <div className="w-full flex flex-col justify-center items-center my-auto relative space-y-8">
@@ -13,6 +37,7 @@ function index() {
           <textarea
             className="textarea textarea-bordered w-full h-60"
             placeholder="Firstly,"
+            onChange={(event) => setSkillKnowledge(event.target.value)}
           ></textarea>
         </div>
       </div>
@@ -20,12 +45,27 @@ function index() {
         <Link href="/Addskill">
           <button className="btn btn-primary">Back</button>
         </Link>
-        <Link href="/Addskill-3">
+        <a onClick={() => sendProps2()}>
           <button className="btn btn-primary">Next</button>
-        </Link>
+        </a>
       </div>
     </div>
   )
 }
 
 export default index
+
+export const getServerSideProps = async (context) => {
+  const session = await getSession(context)
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/Login',
+      },
+    }
+  }
+
+  return {
+    props: { session },
+  }
+}

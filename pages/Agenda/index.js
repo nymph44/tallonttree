@@ -1,3 +1,4 @@
+import { getSession } from 'next-auth/react'
 import React from 'react'
 import FullCalendar from '../../components/global/Fullcalendar'
 import Header from '../../components/ui/Header'
@@ -14,4 +15,19 @@ export default function index() {
       {/* <FullCalendar initialView="timeGridWeek" /> */}
     </>
   )
+}
+
+export const getServerSideProps = async (context) => {
+  const session = await getSession(context)
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/Login',
+      },
+    }
+  }
+
+  return {
+    props: { session },
+  }
 }

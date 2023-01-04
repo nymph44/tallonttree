@@ -1,3 +1,4 @@
+import { getSession } from 'next-auth/react'
 import React from 'react'
 import Completionist from '../../components/skill/completionist/Completionist'
 import Roadmap from '../../components/skill/roadmap/Roadmap'
@@ -248,3 +249,18 @@ function index() {
 }
 
 export default index
+
+export const getServerSideProps = async (context) => {
+  const session = await getSession(context)
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/Login',
+      },
+    }
+  }
+
+  return {
+    props: { session },
+  }
+}
