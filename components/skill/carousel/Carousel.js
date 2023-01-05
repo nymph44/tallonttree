@@ -12,12 +12,12 @@ function Carousel() {
           id="slide1"
           className="carousel-item relative  bg-no-repeat bg-cover bg-center	  w-full rounded-lg"
         >
-          <div className="z-10 pb-8 ml-24  flex flex-col">
-            <div className=" mt-auto w-1/2 py-4 bg-base-200  p-4 rounded-lg">
-              <p className="py-2 text-2xl text-base-content drop-shadow-lg font-bold">
+          <div className="z-10 pb-8 ml-24  flex flex-col ">
+            <div className=" mt-auto w-1/2 py-4 bg-primary  p-4 rounded-lg opacity-90 ">
+              <p className="py-2 text-2xl text-neutral font-bold">
                 Advanced React
               </p>
-              <p className="text-sm text-base-content drop-shadow-lg ">
+              <p className="text-sm text-neutral ">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
