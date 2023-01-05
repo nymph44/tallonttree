@@ -21,7 +21,7 @@ function index() {
   return (
     <div className="flex flex-col items-center h-[calc(100vh-120px)]   -mt-10">
       {/* <LottiePlayer animationData={meditating} loop={true} /> */}
-      <div className="w-96 my-40 -mb-40 bg-primary rounded-full">{View}</div>
+      <div className="w-40 mt-40 bg-primary rounded-full">{View}</div>
 
       <Argument />
       {/* <Argument /> */}

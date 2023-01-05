@@ -6,18 +6,22 @@ function index() {
   return (
     <>
       <div className="w-full flex space-between">
-        <div className="flex w-1/2 items-center space-x-8">
-          <img
-            className="w-48 h-48 rounded-full cover"
-            src="https://picsum.photos/200/300"
-            alt=""
-          />
+        <div className="flex w-1/2  items-center space-x-8">
+          <div className="rounded-full items-center flex">
+            <img
+              className="w-60 rounded-full cover"
+              src="https://scontent-ams4-1.xx.fbcdn.net/v/t31.18172-8/16178469_1395479897131830_4879926322376972206_o.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=5AfOLDZWPhQAX8tFUgG&_nc_ht=scontent-ams4-1.xx&oh=00_AfDIwkOSfOp3xlzvkKNiYnSHB6oVzv2MVKzDwGwmOQVkBg&oe=63DE77DC"
+              alt=""
+            />
+          </div>
           <div className="flex flex-col space-y-4">
             <div className="flex flex-col space-y-2">
               <h1 className="text-2xl font-bold">
-                JavaScript for beginners and experts
+                Portuguese for Beginners: A Complete Course
               </h1>
-              <p className="text-sm">Learn to program in modern JavaScript</p>
+              <p className="text-sm">
+                Learn Portuguese with this complete course for beginners.
+              </p>
             </div>
             <div className="flex items-center space-x-4">
               <div className="badge badge-primary">Recommended</div>
@@ -81,7 +85,7 @@ function index() {
                     />
                   </svg>
                   <div>
-                    Programming in JavaScript from the basics step by step.
+                    Learn the basics of the Portuguese language and start
                   </div>
                 </li>
                 <li className="flex text-md gap-4">
@@ -99,10 +103,7 @@ function index() {
                       d="M4.5 12.75l6 6 9-13.5"
                     />
                   </svg>
-                  <div>
-                    Take the step towards a fullstack developer to increase your
-                    market value.
-                  </div>
+                  <div>How to use the language in real life situations.</div>
                 </li>
                 <li className="flex text-md gap-4">
                   <svg
@@ -119,10 +120,7 @@ function index() {
                       d="M4.5 12.75l6 6 9-13.5"
                     />
                   </svg>
-                  <div>
-                    The advanced JavaScript topics such as proxies, generators,
-                    promises and async / await.
-                  </div>
+                  <div>Verbs and grammar in Portuguese.</div>
                 </li>
               </ul>
               <ul className="flex flex-col space-y-4">
@@ -142,7 +140,7 @@ function index() {
                     />
                   </svg>
                   <div>
-                    Programming in JavaScript from the basics step by step.
+                    Learn the basics of the Portuguese language and start
                   </div>
                 </li>
                 <li className="flex text-md gap-4">
@@ -160,10 +158,7 @@ function index() {
                       d="M4.5 12.75l6 6 9-13.5"
                     />
                   </svg>
-                  <div>
-                    Take the step towards a fullstack developer to increase your
-                    market value.
-                  </div>
+                  <div>How to use the language in real life situations.</div>
                 </li>
                 <li className="flex text-md gap-4">
                   <svg
@@ -180,10 +175,7 @@ function index() {
                       d="M4.5 12.75l6 6 9-13.5"
                     />
                   </svg>
-                  <div>
-                    The advanced JavaScript topics such as proxies, generators,
-                    promises and async / await.
-                  </div>
+                  <div>Verbs and grammar in Portuguese.</div>
                 </li>
               </ul>
             </div>
@@ -193,36 +185,42 @@ function index() {
               <h2 className="text-2xl">Skill roadmap</h2>
               <p>Generated roadmap for this skill</p>
             </div>
-            <div className="flex flex-wrap gap-x-16 gap-y-4 py-4 px-4">
+            <div className="grid grid-cols-3 gap-y-4 p-4">
               <div className="flex items-center space-x-4 ">
                 <div className="indicator">
-                  <span className="indicator-item badge badge-primary"></span>
+                  <span className="indicator-item badge badge-info"></span>
                 </div>
-                <div>Subgoal 1</div>
+                <div>Subject pronouns</div>
               </div>
               <div className="flex items-center space-x-4 ">
                 <div className="indicator">
                   <span className="indicator-item badge badge-error"></span>
                 </div>
-                <div>Subgoal 1</div>
+                <div>Basic greetings</div>
               </div>
               <div className="flex items-center space-x-4 ">
                 <div className="indicator">
                   <span className="indicator-item badge badge-warning"></span>
                 </div>
-                <div>Subgoal 1</div>
+                <div>Asking questions</div>
               </div>
               <div className="flex items-center space-x-4 ">
                 <div className="indicator">
-                  <span className="indicator-item badge badge-info"></span>
+                  <span className="indicator-item badge badge-primary"></span>
                 </div>
-                <div>Subgoal 1</div>
+                <div>Sentence structure</div>
               </div>
               <div className="flex items-center space-x-4 ">
                 <div className="indicator">
-                  <span className="indicator-item badge badge-secondary"></span>
+                  <span className="indicator-item badge badge-error"></span>
                 </div>
-                <div>Subgoal 1</div>
+                <div>Top 20 verbs</div>
+              </div>
+              <div className="flex items-center space-x-4 ">
+                <div className="indicator">
+                  <span className="indicator-item badge badge-error"></span>
+                </div>
+                <div>basic conjunctions</div>
               </div>
             </div>
             <div>

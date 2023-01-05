@@ -14,20 +14,11 @@ const columns = [
 ]
 
 const rows = [
-  [
-    'toTrain',
-    'Walk to train stop',
-    'walk',
-    null,
-    null,
-    5 * 60 * 1000,
-    100,
-    null,
-  ],
-  ['music', 'Listen to music', 'music', null, null, 70 * 60 * 1000, 100, null],
+  ['toTrain', 'Basic greetings', 'walk', null, null, 5 * 60 * 1000, 100, null],
+  ['music', 'Subject pronouns', 'music', null, null, 70 * 60 * 1000, 100, null],
   [
     'wait',
-    'Wait for train',
+    'Asking questions',
     'wait',
     null,
     null,
@@ -35,9 +26,18 @@ const rows = [
     100,
     'toTrain',
   ],
-  ['train', 'Train ride', 'train', null, null, 45 * 60 * 1000, 75, 'wait'],
-  ['toWork', 'Walk to work', 'walk', null, null, 10 * 60 * 1000, 0, 'train'],
-  ['work', 'Sit down at desk', null, null, null, 2 * 60 * 1000, 0, 'toWork'],
+  [
+    'train',
+    'Sentence structure',
+    'train',
+    null,
+    null,
+    45 * 60 * 1000,
+    75,
+    'wait',
+  ],
+  ['toWork', 'Top 20 verbs', 'walk', null, null, 10 * 60 * 1000, 0, 'train'],
+  ['work', 'basic conjunctions', null, null, null, 2 * 60 * 1000, 0, 'toWork'],
 ]
 
 export const data = [columns, ...rows]
