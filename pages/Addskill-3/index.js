@@ -30,7 +30,7 @@ function index() {
   }
 
   return (
-    <div className="flex flex-col items-center h-full -mt-10">
+    <div className="flex flex-col items-center h-[calc(100vh-120px)] -mt-10">
       <div className="w-full flex flex-col justify-center items-center my-auto relative space-y-16">
         <div className="flex flex-col items-center space-y-4">
           <h2 className="font-bold text-4xl text-primary">

@@ -28,7 +28,7 @@ export const skills = {
 }
 
 export const skillsAll = {
-  id: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+  id: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
   title: [
     'PHP',
     'Advanced Mathematics',
@@ -39,6 +39,7 @@ export const skillsAll = {
     'Writing',
     'Drawing',
     'Engine building',
+    'Portuguese',
   ],
   description: [
     'PHP is a popular general-purpose scripting language that powers everything from your blog to the most popular websites in the world.',
@@ -50,6 +51,7 @@ export const skillsAll = {
     'Writing is a neuropsychological activity and cognitive process whose the purpose is creating media, i.e. mainly texts. It structures and translates volatile human thoughts into persistent human communication, through the use of languages and their related writing systems. Writing uses epigraphic inscriptions for producing documents, which record texts in natural/physical media (e.g. stones or papers) with hands and pens/inks or printing presses and types/inks, or in digital media with typesetting systems and word processors.[1][2] Writing systems do not themselves constitute human languages (with the debatable exception of computer languages); they are a means of rendering language into a form that can be reconstructed by other humans separated by time and/or space.[3][4] While not all languages use a writing system, those that do can complement and extend capacities of spoken language by creating durable forms of language that can be transmitted across space (e.g. written correspondence) and stored over time (e.g. libraries or other public records).[5] It has also been observed that the activity of writing itself can have knowledge-transforming effects, since it allows humans to externalize their thinking in forms that are easier to reflect on, elaborate, reconsider, and revise.[6][7] A system of writing relies on many of the same semantic structures as the language it represents, such as lexicon and syntax, with the added dependency of a system of symbols representing that languages phonology and morphology. Nevertheless, written languages in the course of inscription may take on characteristics distinctive from any available in spoken language.[8] The result of the activity of writing is called a text, and the interpreter or activator of a text is called a reader',
     'Help teach it by adding your drawings to the world’s largest doodling data set, shared publicly to help with machine learning research.',
     'Engine building can be expensive if you go in without a firm idea of what youre doing. Individual parts may not be expensive, but with all the components within a single car engine, your costs can add up quickly if you start buying parts and working without a plan in place and a goal in mind. Weve compiled this Engine Building Basics guide to help get you started on the path towards your first engine build. Review the elements of the engine building timeline, check out our tips for how to save money and make your engine build go smoothly, and check out our online store for quick access to all the tools and parts youll need along the way!',
+    'The course Portuguese  is intended for students with some knowledge of Portuguese. You should already be able to ask for directions, to ask what time it is, to count and to name different colours, for example. During Portuguese level 2 you will further expand your proficiency in speaking, listening, reading and writing. You will learn things you can use in your daily life, such as exchanging personal details (como te chamas?), asking the way (onde é o café?) or ordering something in a café or bar (um cafezinho, por favor!). Grammar covered in the course includes the past tense. Upon completion of the course you will be able to talk about something that took place in the pretérito perfeito (comi muito bem!).',
   ],
   percentage: [
     'w-1/3',
@@ -61,6 +63,7 @@ export const skillsAll = {
     'w-60',
     'w-full',
     'w-full',
+    'w-1/3',
   ],
 }
 

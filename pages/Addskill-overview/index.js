@@ -70,8 +70,8 @@ function index() {
     })
   }
   return (
-    <div className="flex space-x-8">
-      <div className="w-1/2 bg-base-100 p-4 rounded-xl">
+    <div className="flex  space-x-8">
+      <div className="w-1/2  bg-base-200 p-4 rounded-xl">
         <h2 className="text-2xl font-bold">Overview</h2>
         <h2 className="text-xl">{props.skillTitle}</h2>
         <div className="my-4 flex flex-col space-y-4">
@@ -130,8 +130,8 @@ function index() {
           </div>
         </div>
       </div>
-      <div className="w-1/2 h-full rounded-xl flex flex-col space-y-8">
-        <div className=" h-1/2 bg-base-100 p-4 rounded-xl">
+      <div className="w-1/2 bg-base-200 rounded-xl flex flex-col space-y-8">
+        <div className=" h-1/2  p-4 rounded-xl">
           <h2 className="text-2xl font-bold">Skill roadmap</h2>
           <p className="text-xl">Generated roadmap for your skill</p>
         </div>

@@ -32,7 +32,6 @@ function index() {
           </div>
           <div className=" -mt-2 p-4 rounded-xl bg-base-200 border border-base-300">
             <div className="flex">
-              hai
               <div className="flex flex-col w-full">
                 <ListItem />
               </div>
