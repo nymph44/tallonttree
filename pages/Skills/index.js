@@ -16,6 +16,7 @@ function index() {
     const unsubscribe = db
       .collection('mySkills')
       .where('user', '==', session.user.email)
+      .limit(3)
       // .where('approved', '==', false)
       .onSnapshot((snapshot) => {
         const newUnApprovedSkills = snapshot.docs.map((doc) => ({
@@ -45,7 +46,7 @@ function index() {
             ) : (
               unApprovedSkills.map((unApprovedSkills, index) => {
                 return (
-                  <div className="w-1/4 bg-base-200 border border-base-300 rounded-xl p-4">
+                  <div className="w-1/5 bg-base-200 border border-base-300 rounded-xl p-4">
                     <h1 className="font-bold mb-4">{unApprovedSkills.id}</h1>
                     <div className="w-full bg-accent rounded-full h-2.5 mb-4">
                       <div className={`bg-gray-300 h-2.5 rounded-full `}></div>
@@ -86,6 +87,7 @@ function index() {
             </div>
           </div>
         </div>
+        <h2 className="text-xl font-bold">Your skills</h2>
         <WrapSkillCards />
       </div>
     </>

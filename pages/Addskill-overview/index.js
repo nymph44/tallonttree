@@ -66,7 +66,7 @@ function index() {
   function finalizeProps() {
     CreateSkill()
     Router.push({
-      pathname: '/Dashboard',
+      pathname: '/Skills',
     })
   }
   return (

@@ -56,7 +56,12 @@ const Details = ({ skill, skillDescription, id }) => {
             <div className="bg-base-200 rounded-xl p-4 flex space-y-4 flex-col">
               <h2>Reflect</h2>
               <div className="bg-primary h-2.5 rounded-full"></div>
-              <Link href={'/Kdarate'}>
+              <Link
+                href={{
+                  pathname: '/Skill/' + id + '/Kdarate',
+                  // query: { id: skill.id },
+                }}
+              >
                 <button className="btn btn-primary">
                   Continue reflect on subgoal
                 </button>
