@@ -85,7 +85,7 @@ function Slug({
               <div className="w-full rounded-xl">
                 <div className="mx-2 pr-4">
                   <p>{question}</p>
-                  <div className="bg-base-200 p-4 rounded-lg my-4">
+                  {/* <div className="bg-base-200 p-4 rounded-lg my-4">
                     <p>
                       {'<'}
                       <span className="text-primary">ui</span>:
@@ -94,7 +94,7 @@ function Slug({
                       <span className="text-primary">"b.xhtml"</span>
                       {'/>'}
                     </p>
-                  </div>
+                  </div> */}
                   <div>
                     <p>{dump}</p>
                   </div>

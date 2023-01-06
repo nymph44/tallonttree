@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Router, { useRouter } from 'next/router'
 function index() {
   const [skillKnowledge, setSkillKnowledge] = useState('')
-  console.log(skillKnowledge)
+
   function sendProps2() {
     Router.push({
       pathname: '/Addskill-3',

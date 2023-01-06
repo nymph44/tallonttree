@@ -23,8 +23,6 @@ export const getStaticProps = async (context) => {
 }
 
 const Details = ({ skill, skillDescription, id }) => {
-  console.log(skill)
-  console.log(skillDescription)
   return (
     <div>
       <div className="pt-4 flex">

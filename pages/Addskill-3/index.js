@@ -5,7 +5,6 @@ import React, { useState } from 'react'
 function index() {
   const [skillTime, setSkillTime] = useState('')
 
-  console.log(skillTime)
   function sendProps3() {
     Router.push({
       pathname: '/Addskill-4',
