@@ -52,8 +52,35 @@ function index({ awnser, dump, votes }) {
               <div className="w-11/12 rounded-xl">
                 <div className="mx-2 pr-4">
                   <p>{awnser}</p>
-                  <div className="bg-base-200 p-4 rounded-lg my-4">
+                  {/* <div className="bg-base-200 p-4 rounded-lg my-4">
                     <p>{dump}</p>
+                  </div> */}
+                </div>
+                <div className="divider mt-12 pr-8"></div>
+                <div className="flex space-x-4">
+                  <div className="flex space-x-2 items-center">
+                    <img
+                      className="rounded-full w-8 h-8 object-cover"
+                      src="https://grandvision-images.imgix.net/media/61DFCDC7-BCC8-4E8A-ACCB81165ADF1B09/7393F0EC-FD2A-402A-961FBC7BB1503EA5/8135DEDF-F9B4-45EA-85C0A6DADB24C31B/original_png-8056597242370_ditto_model_male_06_hd-112.png"
+                    />
+                    <p className="font-bold">Peter de Graaf</p>
+                  </div>
+                  <div className="flex space-x-4 items-center">
+                    <p className="hover:underline hover:text-primary cursor-pointer">
+                      Reply
+                    </p>
+                    <p className="hover:underline hover:text-primary cursor-pointer">
+                      Share
+                    </p>
+                    <p className="hover:underline hover:text-primary cursor-pointer">
+                      Report
+                    </p>
+                    <p className="hover:underline hover:text-primary cursor-pointer">
+                      Pin
+                    </p>
+                    <p className="hover:underline hover:text-primary cursor-pointer">
+                      Follow
+                    </p>
                   </div>
                 </div>
               </div>

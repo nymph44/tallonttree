@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react'
 function Completionist() {
   const [completionist, setCompletionist] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  console.log(completionist)
+
   useEffect(() => {
     const fetchData = async () => {
       ;(async () => {
