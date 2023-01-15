@@ -16,7 +16,7 @@ The tallonttree dashboard allows users to add new skills and reflect on them usi
 - Hand-in materials
 - Search for new skills
 - Create posts on community
-- Respons to post on community
+- Respond to post on community
 
 The project was built using the following technologies:
 ## Tech
