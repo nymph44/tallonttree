@@ -1,7 +1,7 @@
 # Tallent Tree - Learner Dashboard
 ## _A tool designed for pupils_
 
-[![Build Status]
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 Welcome to the tallonttree GitHub repository! This project was built as a school project to help new pupils become familiar with 21st century skills.
 
