@@ -24,11 +24,10 @@ The project was built using the following technologies:
 Dillinger uses a number of open source projects to work properly:
 
 - [NextJs](https://nextjs.org/) 
-- [Tailwind CSS](https://nextjs.org/) 
-- [markdown-it](https://nextjs.org/) 
-- [Firebase](https://nextjs.org/) 
-- [Netlify](https://nextjs.org/) 
-- [Material UI](https://nextjs.org/) 
+- [Tailwind CSS]([https://nextjs.org/](https://tailwindcss.com/)) 
+- [Firebase](https://firebase.google.com/)
+- [Netlify](https://www.netlify.com/) 
+- [Material UI](https://mui.com/) 
 
 To get started with the project, you'll need to have Node.js and npm installed on your machine. Once you've cloned the repository, navigate to the project directory and run the following command to install the dependencies:
 
