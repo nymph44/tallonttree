@@ -24,7 +24,7 @@ The project was built using the following technologies:
 Dillinger uses a number of open source projects to work properly:
 
 - [NextJs](https://nextjs.org/) 
-- [Tailwind CSS]([https://nextjs.org/](https://tailwindcss.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 - [Firebase](https://firebase.google.com/)
 - [Netlify](https://www.netlify.com/) 
 - [Material UI](https://mui.com/) 
